@@ -1,0 +1,796 @@
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+
+/*
+Reset
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+body {
+  line-height: 1
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+a,
+a:active,
+a:hover {
+  text-decoration: none !important;
+  color: var(--white)
+}
+
+dl, ol, ul {
+  margin-bottom: 0 !important;
+}
+
+/*
+Layout
+*/
+body {
+  font-family: 'Calibri', 'Arial', 'Helvetica', sans-serif;
+  font-size: 14px;
+  background-color: #f8f8f8;
+}
+.main-content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+/*
+Typography
+*/
+h1 {
+  font-size: 24px
+}
+
+h2 {
+  font-size: 21px
+}
+
+h3 {
+  font-size: 18px
+}
+
+h4 {
+  font-size: 16px
+}
+
+h5 {
+  font-size: 14px
+}
+
+h6 {
+  font-size: 12px
+}
+
+.thin {
+  font-weight: 100
+}
+
+.light {
+  font-weight: 300
+}
+
+.regular {
+  font-weight: 400
+}
+
+.medium {
+  font-weight: 500
+}
+
+.semibold {
+  font-weight: 600
+}
+
+.bold {
+  font-weight: 700
+}
+
+.black {
+  font-weight: 900
+}
+
+.italic {
+  font-style: italic
+}
+
+/*
+Page
+*/
+.page-title {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 36px;
+  text-align: center;
+  padding: 20px 0 50px 0;
+  position: relative;
+  display: table;
+  margin: 0 auto;
+}
+
+.page-title:after {
+  height: 1px;
+  width: 120%;
+  position: absolute;
+  content: '';
+  bottom: 30px;
+  background-color: #ed5854;
+  left: -10%;
+}
+
+/*
+Download
+*/
+
+.download {
+  background-color: #231f20;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  margin: 0 14px;
+  text-align: center;
+  border-radius: 5px;
+  min-width: 120px;
+  min-height: 40px;
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+}
+
+.download::after {
+  height: 50px;
+  width: 1px;
+  background-color: #ccc;
+  position:absolute;
+  content: '';
+  right: -14px;
+  top:-5px;
+}
+
+.download:last-child::after {
+  display: none;
+}
+
+.download .icon {
+  font-size: 28px;
+  top: 7px;
+  position: absolute;
+  left: 18px;
+}
+
+.download .text {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  line-height: 1.25;
+  display: inline-block;
+  text-indent: 15px;
+}
+
+/*
+Cards
+*/
+.card {
+  background-color:#fff;
+  border:1px solid #ccc;
+  display:inline-block;
+  position: relative;
+  width:100%;
+  margin-bottom: 30px;
+}
+.card .card-title {
+  color:#fff;
+  background-color:#000;
+  padding:10px;
+  text-indent: 10px;
+}
+
+.card .card-content {
+  padding-bottom: 10px;
+}
+
+.card .card-content.no-legend {
+  padding-bottom: 50px;
+}
+
+.card .card-footer {
+  position: absolute;
+  right: 10px;
+  bottom:10px;
+}
+
+.card_4 .card-content {
+  padding-bottom: 50px;
+}
+
+.card_4 .card-footer  {
+  width: 100%;
+  min-width: auto;
+  right: auto;
+  left: 0.5%;
+}
+
+.card_4 .card-footer .download {
+  width: 25%;
+  margin-right: 4%;
+  margin-left: 4%;
+  min-width: auto;
+}
+
+.card_4 .card-footer .download:after {
+  right: -15%;
+}
+
+/*
+Icons
+*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./assets/fonts/icomoon.eot?u0meae');
+  src:  url('./assets/fonts/icomoon.eot?u0meae#iefix') format('embedded-opentype'),
+    url('./assets/fonts/icomoon.woff2?u0meae') format('woff2'),
+    url('./assets/fonts/icomoon.ttf?u0meae') format('truetype'),
+    url('./assets/fonts/icomoon.woff?u0meae') format('woff'),
+    url('./assets/fonts/icomoon.svg?u0meae#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left-black:before {
+  content: "\e900";
+}
+.icon-arrow-left-red:before {
+  content: "\e901";
+  color: #ef6c69;
+}
+.icon-arrow-left-white:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-arrow-right-black:before {
+  content: "\e903";
+}
+.icon-arrow-right-red:before {
+  content: "\e904";
+  color: #ef6c69;
+}
+.icon-arrow-right-white:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-close-black:before {
+  content: "\e906";
+}
+.icon-close-red:before {
+  content: "\e907";
+  color: #ef6c69;
+}
+.icon-close-red-negative .path1:before {
+  content: "\e908";
+  color: rgb(239, 108, 105);
+}
+.icon-close-red-negative .path2:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-close-white:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-contact-fax .path1:before {
+  content: "\e90b";
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path2:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path3:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path4:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path5:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path6:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path7:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path8:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path9:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path10:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path11:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path12:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path13:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path14:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-fax .path15:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-fax .path16:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-fax .path17:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-fax .path18:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-fax .path19:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-fax .path20:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-fax .path21:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-location .path1:before {
+  content: "\e920";
+  color: rgb(239, 108, 105);
+}
+.icon-contact-location .path2:before {
+  content: "\e921";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-location .path3:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-location .path4:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-mail .path1:before {
+  content: "\e924";
+  color: rgb(239, 108, 105);
+}
+.icon-contact-mail .path2:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-mail .path3:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-mail .path4:before {
+  content: "\e927";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-mail .path5:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-mail .path6:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-contact-phone .path1:before {
+  content: "\e92a";
+  color: rgb(239, 108, 105);
+}
+.icon-contact-phone .path2:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(239, 108, 105);
+}
+.icon-contact-phone .path3:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-download-excel .path1:before {
+  content: "\e92d";
+  color: rgb(69, 161, 94);
+}
+.icon-download-excel .path2:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(69, 161, 94);
+}
+.icon-download-excel .path3:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(69, 161, 94);
+}
+.icon-download-excel .path4:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(69, 161, 94);
+}
+.icon-download-excel .path5:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(69, 161, 94);
+}
+.icon-download-excel .path6:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(69, 161, 94);
+}
+.icon-download-excel .path7:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(69, 161, 94);
+}
+.icon-download-excel .path8:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-download-excel .path9:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-download-image .path1:before {
+  content: "\e936";
+  color: rgb(65, 168, 199);
+}
+.icon-download-image .path2:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(65, 168, 199);
+}
+.icon-download-image .path3:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(65, 168, 199);
+}
+.icon-download-image .path4:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-download-image .path5:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-download-pdf .path1:before {
+  content: "\e93b";
+  color: rgb(239, 61, 47);
+}
+.icon-download-pdf .path2:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(239, 61, 47);
+}
+.icon-download-pdf .path3:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(239, 61, 47);
+}
+.icon-download-pdf .path4:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(239, 61, 47);
+}
+.icon-download-pdf .path5:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(239, 61, 47);
+}
+.icon-download-pdf .path6:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-edit-black:before {
+  content: "\e941";
+}
+.icon-edit-negative .path1:before {
+  content: "\e942";
+  color: rgb(67, 171, 200);
+}
+.icon-edit-negative .path2:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-edit-negative .path3:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-edit-negative .path4:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-edit-negative .path5:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-edit-red:before {
+  content: "\e947";
+  color: #ef6c69;
+}
+.icon-edit-white:before {
+  content: "\e948";
+  color: #fff;
+}
+.icon-fax-black:before {
+  content: "\e949";
+}
+.icon-fax-red:before {
+  content: "\e94a";
+  color: #ef6c69;
+}
+.icon-fax-white:before {
+  content: "\e94b";
+  color: #fff;
+}
+.icon-home-black:before {
+  content: "\e94c";
+}
+.icon-home-red:before {
+  content: "\e94d";
+  color: #ef6c69;
+}
+.icon-home-white:before {
+  content: "\e94e";
+  color: #fff;
+}
+.icon-location-black:before {
+  content: "\e94f";
+}
+.icon-location-red:before {
+  content: "\e950";
+  color: #ef6c69;
+}
+.icon-location-white:before {
+  content: "\e951";
+  color: #fff;
+}
+.icon-mail-black:before {
+  content: "\e952";
+}
+.icon-mail-red:before {
+  content: "\e953";
+  color: #ef6c69;
+}
+.icon-mail-white:before {
+  content: "\e954";
+  color: #fff;
+}
+.icon-phone-black:before {
+  content: "\e955";
+}
+.icon-phone-red:before {
+  content: "\e956";
+  color: #ef6c69;
+}
+.icon-phone-white:before {
+  content: "\e957";
+  color: #fff;
+}
+.icon-plus-black:before {
+  content: "\e958";
+}
+.icon-plus-red:before {
+  content: "\e959";
+  color: #ef6c69;
+}
+.icon-plus-white:before {
+  content: "\e95a";
+  color: #fff;
+}
+.icon-powerplant-black:before {
+  content: "\e95b";
+}
+.icon-powerplant-red:before {
+  content: "\e95c";
+  color: #ed5854;
+}
+.icon-powerplant-white:before {
+  content: "\e95d";
+  color: #fff;
+}
