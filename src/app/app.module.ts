@@ -21,6 +21,7 @@ import { ObracunskaMjerenjaComponent } from './obracunska-mjerenja/obracunska-mj
 import { VozniRedoviComponent } from './vozni-redovi/vozni-redovi.component';
 import { DogadjajiComponent } from './dogadjaji/dogadjaji.component';
 import { HidrologijaComponent } from './hidrologija/hidrologija.component';
+import { DownloadComponent } from './layout/download/download.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HidrologijaComponent } from './hidrologija/hidrologija.component';
     ObracunskaMjerenjaComponent,
     VozniRedoviComponent,
     DogadjajiComponent,
-    HidrologijaComponent
+    HidrologijaComponent,
+    DownloadComponent
   ],
   imports: [
     BrowserModule,
