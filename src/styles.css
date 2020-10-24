@@ -353,6 +353,20 @@ Cards
   bottom:10px;
 }
 
+.card .card-footer.table {
+  bottom: 35px;
+}
+
+.card .card-table {
+  width: 98%;
+  height: 280px;
+  margin: 1%;
+}
+
+.card .card-table > div {
+  border-radius: 5px;
+}
+
 .card_4 .card-content {
   padding-bottom: 50px;
 }

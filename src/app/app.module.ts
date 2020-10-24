@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AgGridModule } from 'ag-grid-angular';
 import { AgChartsAngularModule } from 'ag-charts-angular';
-
 
 import { PrikazAkumulacijaComponent } from './prikaz-akumulacija/prikaz-akumulacija.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -44,6 +44,7 @@ import { DownloadComponent } from './layout/download/download.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AgChartsAngularModule,
     AgGridModule.withComponents([])
   ],
