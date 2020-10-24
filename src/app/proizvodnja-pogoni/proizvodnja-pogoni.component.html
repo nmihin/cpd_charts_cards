@@ -4,4 +4,26 @@
       <h2 class="page-title">Proizvodnja po pogonima</h2>
     </div>
   </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-title">
+          <h3>Proizvodnja - po pogonima [MWh]</h3>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <h3>Radna snaga pogona [MWh]</h3>
+          </div>
+          <div class="card-content">
+            <ag-charts-angular
+            [options]="optionsRadnaSnaga"
+          ></ag-charts-angular>
+          </div>
+          <div class="card-footer">
+            <app-download></app-download>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
