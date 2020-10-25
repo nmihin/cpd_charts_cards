@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgChartsAngularModule } from 'ag-charts-angular';
 
+import {MatTableModule} from '@angular/material/table';
+import {MatTabsModule} from '@angular/material/tabs';
+
 import { PrikazAkumulacijaComponent } from './prikaz-akumulacija/prikaz-akumulacija.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -22,6 +25,7 @@ import { VozniRedoviComponent } from './vozni-redovi/vozni-redovi.component';
 import { DogadjajiComponent } from './dogadjaji/dogadjaji.component';
 import { HidrologijaComponent } from './hidrologija/hidrologija.component';
 import { DownloadComponent } from './layout/download/download.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,11 +46,14 @@ import { DownloadComponent } from './layout/download/download.component';
     DownloadComponent
   ],
   imports: [
+    MatTableModule,
+    MatTabsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     AgChartsAngularModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

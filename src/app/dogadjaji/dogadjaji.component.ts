@@ -15,6 +15,9 @@ export class DogadjajiComponent implements OnInit {
 
   public modules: any[] = [ClientSideRowModelModule];
 
+  private currentRowHeight;
+  private getRowHeight;
+
   lokacije = [
     { field: 'datum', sortable: true, filter: true  },
     { field: 'postaja', sortable: true, filter: true },
@@ -110,9 +113,10 @@ export class DogadjajiComponent implements OnInit {
   ];
 
   constructor() {
-    this.defaultColDef = {
-      width: 150,
-      resizable: true,
+
+    this.defaultColDef = { resizable: true };
+    this.getRowHeight = function () {
+      return this.currentRowHeight;
     };
   }
 

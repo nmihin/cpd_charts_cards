@@ -12,14 +12,15 @@
         </div>
         <div class="card-content">
           <ag-grid-angular
-            class="card-table ag-theme-alpine"
+            class="card-table ag-theme-alpine pagination"
             [modules]="modules"
             [rowData]="vrijednosti"
             [columnDefs]="lokacije"
+            [pagination]="true"
             (gridReady)="onGridReady($event)">
           </ag-grid-angular>
         </div>
-        <div class="card-footer table">
+        <div class="card-footer table pagination">
           <app-download></app-download>
         </div>
       </div>
