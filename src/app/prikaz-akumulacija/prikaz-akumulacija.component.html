@@ -81,7 +81,7 @@
             </div>
             <div class="col-2">
               <mat-form-field class="card-datepicker" appearance="none">
-                <input matInput [matDatepicker]="pickerFrom" />
+                <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
                 <mat-datepicker-toggle
                   matSuffix
                   [for]="pickerFrom"
@@ -91,7 +91,7 @@
             </div>
             <div class="col-2">
               <mat-form-field class="card-datepicker" appearance="none">
-                <input matInput [matDatepicker]="pickerTo" />
+                <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
                 <mat-datepicker-toggle
                   matSuffix
                   [for]="pickerTo"
@@ -101,7 +101,7 @@
             </div>
             <div class="col-6">
               <button ej-button id='rangeUpdate' (click)='rangeUpdate()'>Print</button>
-              <ejs-rangenavigator #range id="range"  class="card-range" valueType='DateTime' [value]='value'  [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
+              <ejs-rangenavigator #range id="range"  class="card-range" valueType='DateTime' [value]='value' [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
             </div>
           </div>
           <ag-charts-angular [options]="optionsRazina"></ag-charts-angular>

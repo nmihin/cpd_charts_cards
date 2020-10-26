@@ -435,6 +435,10 @@ Cards
   fill: transparent;
 }
 
+.card #range_SelectedArea {
+  fill:#41a9c9;
+}
+
 .card_4 .card-footer  {
   width: 100%;
   min-width: auto;

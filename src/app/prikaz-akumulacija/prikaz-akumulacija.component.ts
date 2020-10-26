@@ -266,6 +266,10 @@ export class PrikazAkumulacijaComponent implements OnInit {
     ];
   }
 
+  selectMonth(e): void {
+    console.log(e)
+  }
+
   rangeUpdate(): void {
     const startValue = new Date(Math.round(this.RangeObj.startValue)).toISOString();
     const endValue = new Date(Math.round(this.RangeObj.endValue)).toISOString();
