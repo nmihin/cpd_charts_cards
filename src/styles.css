@@ -367,6 +367,27 @@ Cards
   margin: 1%;
 }
 
+.card .card-options {
+  padding: 1%;
+  margin: 1%;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  border:1px solid #ccc;
+}
+
+.card .card-datepicker {
+  background-color: #fff;
+  border-radius: 5px;
+  border:1px solid #ccc;
+  padding: 5px 10px;
+}
+
+.card .card-options select {
+  padding:5px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+}
+
 .card .card-table.pagination {
   height: 500px;
   padding-bottom: 45px;

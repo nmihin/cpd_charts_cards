@@ -11,9 +11,7 @@
           <h3>Popunjenost [%]</h3>
         </div>
         <div class="card-content">
-          <ag-charts-angular
-            [options]="optionsAkumulacije"
-          ></ag-charts-angular>
+          <ag-charts-angular [options]="optionsAkumulacije"></ag-charts-angular>
         </div>
         <div class="card-footer">
           <app-download></app-download>
@@ -28,9 +26,7 @@
           <h3>Kapacitet [MWh]</h3>
         </div>
         <div class="card-content">
-          <ag-charts-angular
-            [options]="optionsBuskoBlato"
-          ></ag-charts-angular>
+          <ag-charts-angular [options]="optionsBuskoBlato"></ag-charts-angular>
         </div>
         <div class="card-footer">
           <app-download></app-download>
@@ -43,9 +39,7 @@
           <h3>Kapacitet [MWh]</h3>
         </div>
         <div class="card-content">
-          <ag-charts-angular
-            [options]="optionsStikada"
-          ></ag-charts-angular>
+          <ag-charts-angular [options]="optionsStikada"></ag-charts-angular>
         </div>
         <div class="card-footer">
           <app-download></app-download>
@@ -58,9 +52,7 @@
           <h3>Kapacitet [MWh]</h3>
         </div>
         <div class="card-content">
-          <ag-charts-angular
-            [options]="optionsPeruca"
-          ></ag-charts-angular>
+          <ag-charts-angular [options]="optionsPeruca"></ag-charts-angular>
         </div>
         <div class="card-footer">
           <app-download></app-download>
@@ -75,9 +67,23 @@
           <h3>Razina [m.n.m]</h3>
         </div>
         <div class="card-content no-legend">
-          <ag-charts-angular
-          [options]="optionsRazina"
-        ></ag-charts-angular>
+          <div class="card-options row">
+            <div class="col-3">
+              <select>
+                <option value="Akumulacija Kruščica">Akumulacija Kruščica</option>
+                <option value="Akumulacija Peruća">Akumulacija Peruća</option>
+                <option value="Akumulacija Dubrovnik">Akumulacija Dubrovnik</option>
+              </select>
+            </div>
+            <div class="col-3">
+              <mat-form-field class="card-datepicker">
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+          <ag-charts-angular [options]="optionsRazina"></ag-charts-angular>
         </div>
         <div class="card-footer">
           <app-download></app-download>

@@ -10,6 +10,9 @@ import { AgChartsAngularModule } from 'ag-charts-angular';
 
 import {MatTableModule} from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { PrikazAkumulacijaComponent } from './prikaz-akumulacija/prikaz-akumulacija.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -48,6 +51,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     MatTableModule,
     MatTabsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
