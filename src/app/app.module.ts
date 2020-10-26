@@ -14,6 +14,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
+import { SliderModule } from '@syncfusion/ej2-angular-inputs';
+import { ChartModule, RangeNavigatorModule } from '@syncfusion/ej2-angular-charts';
+import { AreaSeriesService, DateTimeService, StepLineSeriesService, RangeTooltipService} from '@syncfusion/ej2-angular-charts';
+
 import { PrikazAkumulacijaComponent } from './prikaz-akumulacija/prikaz-akumulacija.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -54,6 +58,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    SliderModule,
+    ChartModule,
+    RangeNavigatorModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -61,7 +68,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     AgGridModule.withComponents([]),
     NoopAnimationsModule
   ],
-  providers: [],
+  providers: [AreaSeriesService, DateTimeService, StepLineSeriesService, RangeTooltipService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

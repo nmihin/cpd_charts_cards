@@ -68,19 +68,40 @@
         </div>
         <div class="card-content no-legend">
           <div class="card-options row">
-            <div class="col-3">
+            <div class="col-2">
               <select>
-                <option value="Akumulacija Kruščica">Akumulacija Kruščica</option>
+                <option value="Akumulacija Kruščica">
+                  Akumulacija Kruščica
+                </option>
                 <option value="Akumulacija Peruća">Akumulacija Peruća</option>
-                <option value="Akumulacija Dubrovnik">Akumulacija Dubrovnik</option>
+                <option value="Akumulacija Dubrovnik">
+                  Akumulacija Dubrovnik
+                </option>
               </select>
             </div>
-            <div class="col-3">
-              <mat-form-field class="card-datepicker">
-                <input matInput [matDatepicker]="picker">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+            <div class="col-2">
+              <mat-form-field class="card-datepicker" appearance="none">
+                <input matInput [matDatepicker]="pickerFrom" />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="pickerFrom"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #pickerFrom></mat-datepicker>
               </mat-form-field>
+            </div>
+            <div class="col-2">
+              <mat-form-field class="card-datepicker" appearance="none">
+                <input matInput [matDatepicker]="pickerTo" />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="pickerTo"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #pickerTo></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <button ej-button id='rangeUpdate' (click)='rangeUpdate()'>Print</button>
+              <ejs-rangenavigator #range id="range"  class="card-range" valueType='DateTime' [value]='value'  [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
             </div>
           </div>
           <ag-charts-angular [options]="optionsRazina"></ag-charts-angular>

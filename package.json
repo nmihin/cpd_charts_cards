@@ -23,6 +23,8 @@
     "@angular/platform-browser": "~10.1.6",
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
+    "@syncfusion/ej2-angular-charts": "^18.3.42",
+    "@syncfusion/ej2-angular-inputs": "^18.3.42",
     "ag-charts-angular": "^2.1.0",
     "ag-charts-community": "^2.1.0",
     "ag-grid-angular": "^24.1.0",

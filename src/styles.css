@@ -380,12 +380,36 @@ Cards
   border-radius: 5px;
   border:1px solid #ccc;
   padding: 5px 10px;
+  width: 180px;
+}
+
+.card .card-datepicker .mat-form-field-wrapper {
+  padding-bottom: 0;
+  height: 24px;
+}
+
+.card .card-datepicker .mat-form-field-infix {
+  border-top: 0;
+  padding: 0;
+  bottom: 10px;
+}
+
+.card .mat-form-field-suffix {
+  bottom: 4px;
+}
+
+.card .mat-form-field-flex {
+  height: 24px;
 }
 
 .card .card-options select {
-  padding:5px;
+  padding:8px;
   border:1px solid #ccc;
   border-radius: 5px;
+}
+
+.card .card-options select:focus {
+  outline: none;
 }
 
 .card .card-table.pagination {
@@ -399,6 +423,16 @@ Cards
 
 .card_4 .card-content {
   padding-bottom: 50px;
+}
+
+.card .card-range {
+  width: 100%;
+  float: left;
+  display: inline-block;
+}
+
+.card #range_ChartBorder {
+  fill: transparent;
 }
 
 .card_4 .card-footer  {
