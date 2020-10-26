@@ -267,7 +267,7 @@ export class PrikazAkumulacijaComponent implements OnInit {
   }
 
   selectMonth(e): void {
-    console.log(e)
+
   }
 
   rangeUpdate(): void {

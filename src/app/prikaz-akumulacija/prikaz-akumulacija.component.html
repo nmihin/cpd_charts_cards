@@ -100,8 +100,7 @@
               </mat-form-field>
             </div>
             <div class="col-6">
-              <button ej-button id='rangeUpdate' (click)='rangeUpdate()'>Print</button>
-              <ejs-rangenavigator #range id="range"  class="card-range" valueType='DateTime' [value]='value' [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
+              <ejs-rangenavigator (changed)='rangeUpdate($event)' #range id="range" intervalType='Hours' class="card-range" valueType='DateTime' [value]='value' [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
             </div>
           </div>
           <ag-charts-angular [options]="optionsRazina"></ag-charts-angular>
