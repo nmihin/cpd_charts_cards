@@ -13,33 +13,39 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SliderModule } from '@syncfusion/ej2-angular-inputs';
 import { ChartModule, RangeNavigatorModule } from '@syncfusion/ej2-angular-charts';
 import { AreaSeriesService, DateTimeService, StepLineSeriesService, RangeTooltipService} from '@syncfusion/ej2-angular-charts';
 
-import { PrikazAkumulacijaComponent } from './prikaz-akumulacija/prikaz-akumulacija.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { RadnaJalovaSnagaComponent } from './radna-jalova-snaga/radna-jalova-snaga.component';
-import { BilancaProizvodnjeComponent } from './bilanca-proizvodnje/bilanca-proizvodnje.component';
-import { ProizvodnjaPogoniComponent } from './proizvodnja-pogoni/proizvodnja-pogoni.component';
-import { HidroloskePostajeComponent } from './hidroloske-postaje/hidroloske-postaje.component';
-import { PiezometarskePostajeComponent } from './piezometarske-postaje/piezometarske-postaje.component';
-import { MeteoroloskePostajeComponent } from './meteoroloske-postaje/meteoroloske-postaje.component';
-import { ObracunskaMjerenjaComponent } from './obracunska-mjerenja/obracunska-mjerenja.component';
-import { VozniRedoviComponent } from './vozni-redovi/vozni-redovi.component';
-import { DogadjajiComponent } from './dogadjaji/dogadjaji.component';
-import { HidrologijaComponent } from './hidrologija/hidrologija.component';
-import { DownloadComponent } from './layout/download/download.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+// STRUKTURA
+import { ZaglavljeComponent } from './struktura/zaglavlje/zaglavlje.component';
+import { PodnozjeComponent } from './struktura/podnozje/podnozje.component';
+
+// STRANICE
+import { PrikazAkumulacijaComponent } from './stranice/prikaz-akumulacija/prikaz-akumulacija.component';
+import { RadnaJalovaSnagaComponent } from './stranice/radna-jalova-snaga/radna-jalova-snaga.component';
+import { BilancaProizvodnjeComponent } from './stranice/bilanca-proizvodnje/bilanca-proizvodnje.component';
+import { ProizvodnjaPogoniComponent } from './stranice/proizvodnja-pogoni/proizvodnja-pogoni.component';
+import { HidroloskePostajeComponent } from './stranice/hidroloske-postaje/hidroloske-postaje.component';
+import { PiezometarskePostajeComponent } from './stranice/piezometarske-postaje/piezometarske-postaje.component';
+import { MeteoroloskePostajeComponent } from './stranice/meteoroloske-postaje/meteoroloske-postaje.component';
+import { ObracunskaMjerenjaComponent } from './stranice/obracunska-mjerenja/obracunska-mjerenja.component';
+import { VozniRedoviComponent } from './stranice/vozni-redovi/vozni-redovi.component';
+import { DogadjajiComponent } from './stranice/dogadjaji/dogadjaji.component';
+import { HidrologijaComponent } from './stranice/hidrologija/hidrologija.component';
+
+// KOMPONENTE
+import { PreuzimanjeComponent } from './komponente/preuzimanje/preuzimanje.component';
+import { DatumvrijemerasponComponent } from './komponente/datumvrijemeraspon/datumvrijemeraspon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrikazAkumulacijaComponent,
-    HeaderComponent,
-    FooterComponent,
+    ZaglavljeComponent,
+    PodnozjeComponent,
     RadnaJalovaSnagaComponent,
     BilancaProizvodnjeComponent,
     ProizvodnjaPogoniComponent,
@@ -50,7 +56,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     VozniRedoviComponent,
     DogadjajiComponent,
     HidrologijaComponent,
-    DownloadComponent
+    PreuzimanjeComponent,
+    DatumvrijemerasponComponent
   ],
   imports: [
     MatTableModule,

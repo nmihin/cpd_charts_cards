@@ -1,0 +1,42 @@
+<div class="main-content">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="page-title">Radna i jalova snaga</h2>
+    </div>
+  </div>
+  <div class="row">
+      <div class="card">
+        <div class="card-title">
+          <h3>Proizvodnja</h3>
+        </div>
+        <div class="row card-inside">
+          <div class="col-6 card">
+            <div class="card-title">
+              <h3>Radna snaga [MWh]</h3>
+            </div>
+            <div class="card-content">
+              <ag-charts-angular
+              [options]="optionsRadna"
+            ></ag-charts-angular>
+            </div>
+            <div class="card-footer">
+              <app-preuzimanje></app-preuzimanje>
+            </div>
+          </div>
+          <div class="col-6 card">
+            <div class="card-title">
+              <h3>Jalova snaga [MVar]</h3>
+            </div>
+            <div class="card-content">
+              <ag-charts-angular
+              [options]="optionsRadna"
+            ></ag-charts-angular>
+            </div>
+            <div class="card-footer">
+              <app-preuzimanje></app-preuzimanje>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

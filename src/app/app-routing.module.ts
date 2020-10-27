@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BilancaProizvodnjeComponent } from './bilanca-proizvodnje/bilanca-proizvodnje.component';
-import { DogadjajiComponent } from './dogadjaji/dogadjaji.component';
-import { HidrologijaComponent } from './hidrologija/hidrologija.component';
-import { HidroloskePostajeComponent } from './hidroloske-postaje/hidroloske-postaje.component';
-import { MeteoroloskePostajeComponent } from './meteoroloske-postaje/meteoroloske-postaje.component';
-import { ObracunskaMjerenjaComponent } from './obracunska-mjerenja/obracunska-mjerenja.component';
-import { PiezometarskePostajeComponent } from './piezometarske-postaje/piezometarske-postaje.component';
+import { BilancaProizvodnjeComponent } from './stranice/bilanca-proizvodnje/bilanca-proizvodnje.component';
+import { DogadjajiComponent } from './stranice/dogadjaji/dogadjaji.component';
+import { HidrologijaComponent } from './stranice/hidrologija/hidrologija.component';
+import { HidroloskePostajeComponent } from './stranice/hidroloske-postaje/hidroloske-postaje.component';
+import { MeteoroloskePostajeComponent } from './stranice/meteoroloske-postaje/meteoroloske-postaje.component';
+import { ObracunskaMjerenjaComponent } from './stranice/obracunska-mjerenja/obracunska-mjerenja.component';
+import { PiezometarskePostajeComponent } from './stranice/piezometarske-postaje/piezometarske-postaje.component';
 
-import { PrikazAkumulacijaComponent } from './prikaz-akumulacija/prikaz-akumulacija.component';
-import { ProizvodnjaPogoniComponent } from './proizvodnja-pogoni/proizvodnja-pogoni.component';
-import { RadnaJalovaSnagaComponent } from './radna-jalova-snaga/radna-jalova-snaga.component';
-import { VozniRedoviComponent } from './vozni-redovi/vozni-redovi.component';
+import { PrikazAkumulacijaComponent } from './stranice/prikaz-akumulacija/prikaz-akumulacija.component';
+import { ProizvodnjaPogoniComponent } from './stranice/proizvodnja-pogoni/proizvodnja-pogoni.component';
+import { RadnaJalovaSnagaComponent } from './stranice/radna-jalova-snaga/radna-jalova-snaga.component';
+import { VozniRedoviComponent } from './stranice/vozni-redovi/vozni-redovi.component';
 
 const routes: Routes = [
   { path: '', component: PrikazAkumulacijaComponent },

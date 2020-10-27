@@ -1,0 +1,114 @@
+<div class="main-content">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="page-title">Prikaz akumulacija</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-title">
+          <h3>Popunjenost [%]</h3>
+        </div>
+        <div class="card-content">
+          <ag-charts-angular [options]="optionsAkumulacije"></ag-charts-angular>
+        </div>
+        <div class="card-footer">
+          <app-preuzimanje></app-preuzimanje>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="card card_4">
+        <div class="card-title">
+          <h3>Kapacitet [MWh]</h3>
+        </div>
+        <div class="card-content">
+          <ag-charts-angular [options]="optionsBuskoBlato"></ag-charts-angular>
+        </div>
+        <div class="card-footer">
+          <app-preuzimanje></app-preuzimanje>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card card_4">
+        <div class="card-title">
+          <h3>Kapacitet [MWh]</h3>
+        </div>
+        <div class="card-content">
+          <ag-charts-angular [options]="optionsStikada"></ag-charts-angular>
+        </div>
+        <div class="card-footer">
+          <app-preuzimanje></app-preuzimanje>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card card_4">
+        <div class="card-title">
+          <h3>Kapacitet [MWh]</h3>
+        </div>
+        <div class="card-content">
+          <ag-charts-angular [options]="optionsPeruca"></ag-charts-angular>
+        </div>
+        <div class="card-footer">
+          <app-preuzimanje></app-preuzimanje>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-title">
+          <h3>Razina [m.n.m]</h3>
+        </div>
+        <div class="card-content no-legend">
+          <div class="card-options">
+            <div class="card-select">
+              <select>
+                <option value="Akumulacija Kruščica">
+                  Akumulacija Kruščica
+                </option>
+                <option value="Akumulacija Peruća">Akumulacija Peruća</option>
+                <option value="Akumulacija Dubrovnik">
+                  Akumulacija Dubrovnik
+                </option>
+              </select>
+            </div>
+            <div class="card-datetime">
+              <mat-form-field class="card-datepicker" appearance="none">
+                <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="pickerFrom"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #pickerFrom></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="card-datetime">
+              <mat-form-field class="card-datepicker" appearance="none">
+                <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="pickerTo"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #pickerTo></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="card-range-picker">
+              <ejs-rangenavigator (changed)='rangeUpdate($event)' #range id="range" intervalType='Hours' class="card-range" valueType='DateTime' [value]='value' [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
+            </div>
+          </div>
+          <ag-charts-angular [options]="optionsRazina"></ag-charts-angular>
+        </div>
+        <div class="card-footer">
+          <app-preuzimanje></app-preuzimanje>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
