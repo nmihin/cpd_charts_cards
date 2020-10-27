@@ -368,11 +368,29 @@ Cards
 }
 
 .card .card-options {
-  padding: 1%;
+  padding: 1% 1% 0 1%;
   margin: 1%;
   background-color: #f8f8f8;
   border-radius: 5px;
   border:1px solid #ccc;
+  display: flex;
+  overflow: hidden;
+}
+
+.card .card-options > div {
+  margin: 0 1% 0 0;
+}
+
+.card .card-options .card-select {
+  flex: 0 0 160px;
+}
+
+.card .card-options .card-datepicker {
+  flex: 0 0 120px;
+}
+
+.card .card-options .card-range-picker {
+  flex: 1;
 }
 
 .card .card-datepicker {
@@ -380,7 +398,6 @@ Cards
   border-radius: 5px;
   border:1px solid #ccc;
   padding: 5px 10px;
-  width: 180px;
 }
 
 .card .card-datepicker .mat-form-field-wrapper {
@@ -406,6 +423,7 @@ Cards
   padding:8px;
   border:1px solid #ccc;
   border-radius: 5px;
+  height: 36px;
 }
 
 .card .card-options select:focus {
@@ -431,12 +449,20 @@ Cards
   display: inline-block;
 }
 
+/*
+Chart range
+*/
 .card #range_ChartBorder {
   fill: transparent;
 }
 
 .card #range_SelectedArea {
   fill:#41a9c9;
+}
+
+.card #range_FirstLevelAxisLabels > text {
+  font-size: 10px;
+  fill: #b5b5b5;
 }
 
 .card_4 .card-footer  {

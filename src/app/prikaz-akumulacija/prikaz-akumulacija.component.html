@@ -67,8 +67,8 @@
           <h3>Razina [m.n.m]</h3>
         </div>
         <div class="card-content no-legend">
-          <div class="card-options row">
-            <div class="col-2">
+          <div class="card-options">
+            <div class="card-select">
               <select>
                 <option value="Akumulacija Kruščica">
                   Akumulacija Kruščica
@@ -79,7 +79,7 @@
                 </option>
               </select>
             </div>
-            <div class="col-2">
+            <div class="card-datetime">
               <mat-form-field class="card-datepicker" appearance="none">
                 <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
                 <mat-datepicker-toggle
@@ -89,7 +89,7 @@
                 <mat-datepicker #pickerFrom></mat-datepicker>
               </mat-form-field>
             </div>
-            <div class="col-2">
+            <div class="card-datetime">
               <mat-form-field class="card-datepicker" appearance="none">
                 <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
                 <mat-datepicker-toggle
@@ -99,7 +99,7 @@
                 <mat-datepicker #pickerTo></mat-datepicker>
               </mat-form-field>
             </div>
-            <div class="col-6">
+            <div class="card-range-picker">
               <ejs-rangenavigator (changed)='rangeUpdate($event)' #range id="range" intervalType='Hours' class="card-range" valueType='DateTime' [value]='value' [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
             </div>
           </div>

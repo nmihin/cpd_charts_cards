@@ -1,11 +1,26 @@
 import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
 import { RangeNavigatorComponent } from '@syncfusion/ej2-angular-charts';
+import {
+  MAT_MOMENT_DATE_FORMATS,
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_ADAPTER_OPTIONS,
+} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 
 @Component({
   selector: 'app-prikaz-akumulacija',
   templateUrl: './prikaz-akumulacija.component.html',
   styleUrls: ['./prikaz-akumulacija.component.css'],
   encapsulation: ViewEncapsulation.None,
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'hr-HR' },
+    {
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+    },
+    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
+  ],
 })
 export class PrikazAkumulacijaComponent implements OnInit {
   @ViewChild('range')
@@ -82,53 +97,29 @@ export class PrikazAkumulacijaComponent implements OnInit {
   ];
   razina = [
     { razina: 351.61, vrijeme: '2017-08-13T00:00:00Z' },
-    { razina: 351.6, vrijeme: '2017-08-13T00:30:00Z' },
     { razina: 351.57, vrijeme: '2017-08-13T01:00:00Z' },
-    { razina: 351.5, vrijeme: '2017-08-13T01:30:00Z' },
     { razina: 351.12, vrijeme: '2017-08-13T02:00:00Z' },
-    { razina: 351.11, vrijeme: '2017-08-13T02:30:00Z' },
     { razina: 351.1, vrijeme: '2017-08-13T03:00:00Z' },
-    { razina: 351.11, vrijeme: '2017-08-13T03:30:00Z' },
     { razina: 351.12, vrijeme: '2017-08-13T04:00:00Z' },
-    { razina: 351.13, vrijeme: '2017-08-13T04:30:00Z' },
     { razina: 351.14, vrijeme: '2017-08-13T05:00:00Z' },
-    { razina: 351.15, vrijeme: '2017-08-13T05:30:00Z' },
     { razina: 351.17, vrijeme: '2017-08-13T06:00:00Z' },
-    { razina: 351.16, vrijeme: '2017-08-13T06:30:00Z' },
     { razina: 351.17, vrijeme: '2017-08-13T07:00:00Z' },
-    { razina: 351.14, vrijeme: '2017-08-13T07:30:00Z' },
     { razina: 351.13, vrijeme: '2017-08-13T08:00:00Z' },
-    { razina: 351.12, vrijeme: '2017-08-13T08:30:00Z' },
     { razina: 351.11, vrijeme: '2017-08-13T09:00:00Z' },
-    { razina: 351.1, vrijeme: '2017-08-13T09:30:00Z' },
     { razina: 351.1, vrijeme: '2017-08-13T10:00:00Z' },
-    { razina: 351.1, vrijeme: '2017-08-13T10:30:00Z' },
     { razina: 351.1, vrijeme: '2017-08-13T11:00:00Z' },
-    { razina: 351.1, vrijeme: '2017-08-13T11:30:00Z' },
     { razina: 351.1, vrijeme: '2017-08-13T12:00:00Z' },
-    { razina: 351.21, vrijeme: '2017-08-13T12:30:00Z' },
     { razina: 351.3, vrijeme: '2017-08-13T13:00:00Z' },
-    { razina: 351.17, vrijeme: '2017-08-13T13:30:00Z' },
     { razina: 351.2, vrijeme: '2017-08-13T14:00:00Z' },
-    { razina: 351.12, vrijeme: '2017-08-13T14:30:00Z' },
     { razina: 351.11, vrijeme: '2017-08-13T15:00:00Z' },
-    { razina: 351.1, vrijeme: '2017-08-13T15:30:00Z' },
     { razina: 351.11, vrijeme: '2017-08-13T16:00:00Z' },
-    { razina: 351.12, vrijeme: '2017-08-13T16:30:00Z' },
     { razina: 351.13, vrijeme: '2017-08-13T17:00:00Z' },
-    { razina: 351.14, vrijeme: '2017-08-13T17:30:00Z' },
     { razina: 351.15, vrijeme: '2017-08-13T18:00:00Z' },
-    { razina: 351.17, vrijeme: '2017-08-13T18:30:00Z' },
     { razina: 351.16, vrijeme: '2017-08-13T19:00:00Z' },
-    { razina: 351.17, vrijeme: '2017-08-13T19:30:00Z' },
     { razina: 351.14, vrijeme: '2017-08-13T20:00:00Z' },
-    { razina: 351.13, vrijeme: '2017-08-13T20:30:00Z' },
     { razina: 351.12, vrijeme: '2017-08-13T21:00:00Z' },
-    { razina: 351.11, vrijeme: '2017-08-13T21:30:00Z' },
     { razina: 351.1, vrijeme: '2017-08-13T22:00:00Z' },
-    { razina: 351.1, vrijeme: '2017-08-13T22:30:00Z' },
     { razina: 351.1, vrijeme: '2017-08-13T23:00:00Z' },
-    { razina: 351.1, vrijeme: '2017-08-13T23:30:00Z' },
     { razina: 351.1, vrijeme: '2017-08-14T00:00:00Z' },
   ];
 
@@ -141,14 +132,31 @@ export class PrikazAkumulacijaComponent implements OnInit {
           xKey: 'vrijeme',
           yKey: 'razina',
           stroke: '#f3622d',
-          label: {
-            // tslint:disable-next-line: typedef
-            formatter(params) {
-              return params.value === undefined ? '' : params.value.toFixed(0);
-            },
-          },
           fills: '#f3622d',
           strokes: '#f3622d',
+          tooltipEnabled: false
+        }
+      ],
+      axes: [
+        {
+          type: 'category',
+          nice: false,
+          position: 'bottom',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.slice(11, 16);
+            },
+            fontSize: 12
+          },
+        },
+        {
+          type: 'number',
+          position: 'left',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.toFixed(2);
+            },
+          },
         },
       ],
       legend: {
@@ -270,7 +278,7 @@ export class PrikazAkumulacijaComponent implements OnInit {
 
   }
 
-  rangeUpdate(): void {
+  rangeUpdate(e): void {
     const startValue = new Date(Math.round(this.RangeObj.startValue)).toISOString();
     const endValue = new Date(Math.round(this.RangeObj.endValue)).toISOString();
 
