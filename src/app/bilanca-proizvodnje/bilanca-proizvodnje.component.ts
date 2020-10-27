@@ -1,5 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, ViewChild } from '@angular/core';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
+import { RangeNavigatorComponent } from '@syncfusion/ej2-angular-charts';
+import {
+  MAT_MOMENT_DATE_FORMATS,
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_ADAPTER_OPTIONS,
+} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 
 @Component({
   selector: 'app-bilanca-proizvodnje',
@@ -7,6 +14,9 @@ import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-mod
   styleUrls: ['./bilanca-proizvodnje.component.css'],
 })
 export class BilancaProizvodnjeComponent implements OnInit {
+  @ViewChild('range')
+  public RangeObj: RangeNavigatorComponent;
+
   optionsBilanca: any;
   private defaultColDef;
   private gridApi;
@@ -16,127 +26,127 @@ export class BilancaProizvodnjeComponent implements OnInit {
 
   bilanca = [
     {
-      vrijeme: '00:00',
+      vrijeme: '2017-08-13T00:00:00Z',
       ostvarena: 60,
       planirana: 62,
     },
     {
-      vrijeme: '00:30',
+      vrijeme: '2017-08-13T01:00:00Z',
       ostvarena: 65,
       planirana: 77,
     },
     {
-      vrijeme: '01:00',
+      vrijeme: '2017-08-13T02:00:00Z',
       ostvarena: 50,
       planirana: 55,
     },
     {
-      vrijeme: '01:30',
+      vrijeme: '2017-08-13T03:00:00Z',
       ostvarena: 15,
       planirana: 20,
     },
     {
-      vrijeme: '02:00',
+      vrijeme: '2017-08-13T04:00:00Z',
       ostvarena: 27,
       planirana: 30,
     },
     {
-      vrijeme: '02:30',
+      vrijeme: '2017-08-13T05:00:00Z',
       ostvarena: 30,
       planirana: 35,
     },
     {
-      vrijeme: '03:00',
+      vrijeme: '2017-08-13T06:00:00Z',
       ostvarena: 35,
       planirana: 37,
     },
     {
-      vrijeme: '03:30',
+      vrijeme: '2017-08-13T07:00:00Z',
       ostvarena: 40,
       planirana: 45,
     },
     {
-      vrijeme: '04:00',
+      vrijeme: '2017-08-13T08:00:00Z',
       ostvarena: 37,
       planirana: 40,
     },
     {
-      vrijeme: '04:30',
+      vrijeme: '2017-08-13T09:00:00Z',
       ostvarena: 39,
       planirana: 43,
     },
     {
-      vrijeme: '05:00',
+      vrijeme: '2017-08-13T10:00:00Z',
       ostvarena: 41,
       planirana: 44,
     },
     {
-      vrijeme: '05:30',
+      vrijeme: '2017-08-13T11:00:00Z',
       ostvarena: 43,
       planirana: 47,
     },
     {
-      vrijeme: '06:00',
+      vrijeme: '2017-08-13T12:00:00Z',
       ostvarena: 45,
       planirana: 50,
     },
     {
-      vrijeme: '06:30',
+      vrijeme: '2017-08-13T13:00:00Z',
       ostvarena: 47,
       planirana: 51,
     },
     {
-      vrijeme: '07:00',
+      vrijeme: '2017-08-13T14:00:00Z',
       ostvarena: 44,
       planirana: 48,
     },
     {
-      vrijeme: '07:30',
+      vrijeme: '2017-08-13T15:00:00Z',
       ostvarena: 42,
       planirana: 46,
     },
     {
-      vrijeme: '08:00',
+      vrijeme: '2017-08-13T16:00:00Z',
       ostvarena: 40,
       planirana: 44,
     },
     {
-      vrijeme: '08:30',
+      vrijeme: '2017-08-13T17:00:00Z',
       ostvarena: 39,
       planirana: 42,
     },
     {
-      vrijeme: '09:00',
+      vrijeme: '2017-08-13T18:00:00Z',
       ostvarena: 37,
       planirana: 40,
     },
     {
-      vrijeme: '09:30',
+      vrijeme: '2017-08-13T19:00:00Z',
       ostvarena: 30,
       planirana: 35,
     },
     {
-      vrijeme: '10:00',
+      vrijeme: '2017-08-13T20:00:00Z',
       ostvarena: 28,
       planirana: 33,
     },
     {
-      vrijeme: '10:30',
+      vrijeme: '2017-08-13T21:00:00Z',
       ostvarena: 25,
       planirana: 30,
     },
     {
-      vrijeme: '11:00',
+      vrijeme: '2017-08-13T22:00:00Z',
       ostvarena: 22,
       planirana: 26,
     },
     {
-      vrijeme: '11:30',
+      vrijeme: '2017-08-13T23:00:00Z',
       ostvarena: 20,
       planirana: 23,
     },
     {
-      vrijeme: '12:00',
+      vrijeme: '2017-08-14T00:00:00Z',
       ostvarena: 17,
       planirana: 20,
     },
@@ -218,37 +228,75 @@ export class BilancaProizvodnjeComponent implements OnInit {
   ];
 
   constructor() {
-    // RAZINA
+    // BILANCA
+    this.optionsBilancaInit(this.bilanca);
+  }
+
+  public periodsValue: Object[];
+  public chartData: Object[];
+  public value: Object[];
+
+  ngOnInit(): void {
+    this.chartData = this.bilanca;
+    this.value = [
+      new Date('2017-08-13T00:00:00Z'),
+      new Date('2017-08-14T00:00:00Z'),
+    ];
+  }
+
+  optionsBilancaInit(d): void{
     this.optionsBilanca = {
-      data: this.bilanca,
-      series: [
-        {
-          xKey: 'vrijeme',
-          yKey: 'ostvarena',
-          stroke: '#41a9c9',
-          marker: {
-            fill: '#41a9c9',
-            stroke: '#41a9c9',
+          data: this.bilanca,
+          series: [
+            {
+              xKey: 'vrijeme',
+              yKey: 'ostvarena',
+              stroke: '#41a9c9',
+              marker: {
+                fill: '#41a9c9',
+                stroke: '#41a9c9',
+              },
+            },
+            {
+              xKey: 'vrijeme',
+              yKey: 'planirana',
+              stroke: '#f3622d',
+              marker: {
+                fill: '#f3622d',
+                stroke: '#f3622d',
+              },
+            },
+          ],
+          axes: [
+            {
+              type: 'category',
+              nice: false,
+              position: 'bottom',
+              label: {
+                formatter: function (params) {
+                  return params.value === undefined ? '' : params.value.slice(11, 16);
+                },
+                fontSize: 12
+              },
+            },
+            {
+              type: 'number',
+              position: 'left',
+              label: {
+                formatter: function (params) {
+                  return params.value === undefined ? '' : params.value.toFixed(0);
+                },
+              },
+            },
+          ],
+          legend: {
+            position: 'bottom',
           },
-        },
-        {
-          xKey: 'vrijeme',
-          yKey: 'planirana',
-          stroke: '#f3622d',
-          marker: {
-            fill: '#f3622d',
-            stroke: '#f3622d',
-          },
-        },
-      ],
-      legend: {
-        position: 'bottom',
-      },
     };
 
     this.defaultColDef = {
-      width: 150,
-      resizable: true,
+          width: 150,
+          resizable: true,
     };
   }
 
@@ -266,5 +314,18 @@ export class BilancaProizvodnjeComponent implements OnInit {
     params.api.sizeColumnsToFit();
   }
 
-  ngOnInit(): void {}
+  selectMonth(e): void {
+  }
+
+  rangeUpdate(e): void {
+    const startValue = new Date(Math.round(this.RangeObj.startValue)).toISOString();
+    const endValue = new Date(Math.round(this.RangeObj.endValue)).toISOString();
+
+    // tslint:disable-next-line: typedef
+    const res = this.bilanca.filter(function(o) {
+      return o.vrijeme <= endValue && o.vrijeme >= startValue;
+    });
+
+    this.optionsBilancaInit(res);
+  }
 }

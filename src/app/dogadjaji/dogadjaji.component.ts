@@ -1,12 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
+import { RangeNavigatorComponent } from '@syncfusion/ej2-angular-charts';
+import {
+  MAT_MOMENT_DATE_FORMATS,
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_ADAPTER_OPTIONS,
+} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+
 
 @Component({
   selector: 'app-dogadjaji',
   templateUrl: './dogadjaji.component.html',
-  styleUrls: ['./dogadjaji.component.css']
+  styleUrls: ['./dogadjaji.component.css'],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'hr-HR' },
+    {
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+    },
+    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
+  ]
 })
 export class DogadjajiComponent implements OnInit {
+  @ViewChild('range')
+  public RangeObj: RangeNavigatorComponent;
 
   optionsBilanca: any;
   private defaultColDef;
@@ -30,7 +49,7 @@ export class DogadjajiComponent implements OnInit {
 
   vrijednosti = [
     {
-      'datum': '31.01.2020 10:21:23',
+      'datum': '2017-08-13T00:00:00Z',
       'postaja': 'CS BB',
       'cjelina': 'Agregat',
       'SCADA key': 'CS BB:Agregat C.431. Na mreži',
@@ -39,7 +58,7 @@ export class DogadjajiComponent implements OnInit {
       'opis događaja': '---'
     },
     {
-      'datum': '31.01.2020 10:21:23',
+      'datum': '2017-08-13T01:00:00Z',
       'postaja': 'CS BB',
       'cjelina': 'Agregat',
       'SCADA key': 'CS BB:Agregat C.431. Na mreži',
@@ -48,7 +67,7 @@ export class DogadjajiComponent implements OnInit {
       'opis događaja': '---'
     },
     {
-      'datum': '31.01.2020 10:21:23',
+      'datum': '2017-08-13T02:00:00Z',
       'postaja': 'CS BB',
       'cjelina': 'Agregat',
       'SCADA key': 'CS BB:Agregat C.431. Na mreži',
@@ -57,7 +76,7 @@ export class DogadjajiComponent implements OnInit {
       'opis događaja': '---'
     },
     {
-      'datum': '31.01.2020 10:21:23',
+      'datum': '2017-08-13T03:00:00Z',
       'postaja': 'CS BB',
       'cjelina': 'Agregat',
       'SCADA key': 'CS BB:Agregat C.431. Na mreži',
@@ -66,7 +85,7 @@ export class DogadjajiComponent implements OnInit {
       'opis događaja': '---'
     },
     {
-      'datum': '31.01.2020 10:21:23',
+      'datum': '2017-08-13T04:00:00Z',
       'postaja': 'CS BB',
       'cjelina': 'Agregat',
       'SCADA key': 'CS BB:Agregat C.431. Na mreži',
@@ -75,7 +94,7 @@ export class DogadjajiComponent implements OnInit {
       'opis događaja': '---'
     },
     {
-      'datum': '31.01.2020 10:21:23',
+      'datum': '2017-08-13T05:00:00Z',
       'postaja': 'CS BB',
       'cjelina': 'Agregat',
       'SCADA key': 'CS BB:Agregat C.431. Na mreži',
@@ -84,7 +103,7 @@ export class DogadjajiComponent implements OnInit {
       'opis događaja': '---'
     },
     {
-      'datum': '31.01.2020 10:21:23',
+      'datum': '2017-08-13T06:00:00Z',
       'postaja': 'CS BB',
       'cjelina': 'Agregat',
       'SCADA key': 'CS BB:Agregat C.431. Na mreži',
@@ -93,7 +112,7 @@ export class DogadjajiComponent implements OnInit {
       'opis događaja': '---'
     },
     {
-      'datum': '31.01.2020 10:21:23',
+      'datum': '2017-08-13T07:00:00Z',
       'postaja': 'CS BB',
       'cjelina': 'Agregat',
       'SCADA key': 'CS BB:Agregat C.431. Na mreži',
@@ -102,7 +121,7 @@ export class DogadjajiComponent implements OnInit {
       'opis događaja': '---'
     },
     {
-      'datum': '31.01.2020 10:21:23',
+      'datum': '2017-08-13T08:00:00Z',
       'postaja': 'CS BB',
       'cjelina': 'Agregat',
       'SCADA key': 'CS BB:Agregat C.431. Na mreži',
@@ -134,6 +153,30 @@ export class DogadjajiComponent implements OnInit {
     params.api.sizeColumnsToFit();
   }
 
-  ngOnInit(): void {}
+  public periodsValue: Object[];
+  public chartData: Object[];
+  public value: Object[];
+
+  ngOnInit(): void {
+    this.chartData = this.vrijednosti;
+    this.value = [
+      new Date('2017-08-13T00:00:00Z'),
+      new Date('2017-08-14T00:00:00Z'),
+    ];
+  }
+
+  selectMonth(e): void {
+
+  }
+
+  rangeUpdate(e): void {
+    const startValue = new Date(Math.round(this.RangeObj.startValue)).toISOString();
+    const endValue = new Date(Math.round(this.RangeObj.endValue)).toISOString();
+
+    // tslint:disable-next-line: typedef
+    const res = this.vrijednosti.filter(function(o) {
+      return o.datum <= endValue && o.datum >= startValue;
+    });
+  }
 
 }

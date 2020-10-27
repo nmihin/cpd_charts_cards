@@ -386,7 +386,8 @@ Cards
 }
 
 .card .card-options .card-datepicker {
-  flex: 0 0 120px;
+  flex: 0 0 160px;
+  max-width: 160px;
 }
 
 .card .card-options .card-range-picker {
@@ -409,6 +410,7 @@ Cards
   border-top: 0;
   padding: 0;
   bottom: 10px;
+  width: auto;
 }
 
 .card .mat-form-field-suffix {
