@@ -409,6 +409,36 @@ Cards
   max-width: 160px;
 }
 
+.card .card-options .card-radio {
+  background-color: #f7e7e7;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: 12px;
+}
+
+.card .card-options .card-radio .mat-radio-button {
+  margin-left: 10px;
+}
+
+.card .card-options .card-radio .mat-radio-button:last-child {
+  margin-right: 10px;
+}
+
+.card .card-options .card-radio .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle
+{
+  background-color: #f8f8f8;
+}
+
+.card .card-options .card-radio .mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #41a9c9;
+  border-color: #fff;
+}
+
+.card .card-options .card-radio .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #41a9c9;
+}
+
 .card .card-options .card-range-picker {
   flex: 1;
 }

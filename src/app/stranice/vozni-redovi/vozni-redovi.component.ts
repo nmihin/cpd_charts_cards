@@ -212,6 +212,14 @@ export class VozniRedoviComponent implements OnInit {
     params.api.sizeColumnsToFit();
   }
 
+  selectMonth(e): void {
+
+  }
+
+  rangeUpdate(e): void {
+
+  }
+
   ngOnInit(): void {
   }
 

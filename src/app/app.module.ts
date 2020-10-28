@@ -12,6 +12,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatRadioModule} from '@angular/material/radio';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -65,6 +66,7 @@ import { DatumvrijemerasponComponent } from './komponente/datumvrijemeraspon/dat
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatRadioModule,
     SliderModule,
     ChartModule,
     RangeNavigatorModule,
