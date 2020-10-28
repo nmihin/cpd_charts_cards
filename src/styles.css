@@ -439,6 +439,22 @@ Cards
   border-color: #41a9c9;
 }
 
+.card .card-options .card-checkbox {
+  padding: 10px;
+}
+
+.card .card-options .card-checkbox .mat-checkbox {
+  margin-left: 10px;
+}
+
+.card .card-options .card-checkbox .mat-checkbox:last-child {
+  margin-right: 10px;
+}
+
+.card .card-options .card-checkbox .mat-checkbox.mat-checkbox-checked .mat-checkbox-background {
+  background-color: #41a9c9;
+}
+
 .card .card-options .card-range-picker {
   flex: 1;
 }

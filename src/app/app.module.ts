@@ -8,17 +8,26 @@ import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgChartsAngularModule } from 'ag-charts-angular';
 
-import {MatTableModule} from '@angular/material/table';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatInputModule} from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SliderModule } from '@syncfusion/ej2-angular-inputs';
-import { ChartModule, RangeNavigatorModule } from '@syncfusion/ej2-angular-charts';
-import { AreaSeriesService, DateTimeService, StepLineSeriesService, RangeTooltipService} from '@syncfusion/ej2-angular-charts';
+import {
+  ChartModule,
+  RangeNavigatorModule,
+} from '@syncfusion/ej2-angular-charts';
+import {
+  AreaSeriesService,
+  DateTimeService,
+  StepLineSeriesService,
+  RangeTooltipService,
+} from '@syncfusion/ej2-angular-charts';
 
 // STRUKTURA
 import { ZaglavljeComponent } from './struktura/zaglavlje/zaglavlje.component';
@@ -58,7 +67,7 @@ import { DatumvrijemerasponComponent } from './komponente/datumvrijemeraspon/dat
     DogadjajiComponent,
     HidrologijaComponent,
     PreuzimanjeComponent,
-    DatumvrijemerasponComponent
+    DatumvrijemerasponComponent,
   ],
   imports: [
     MatTableModule,
@@ -67,6 +76,7 @@ import { DatumvrijemerasponComponent } from './komponente/datumvrijemeraspon/dat
     MatDatepickerModule,
     MatNativeDateModule,
     MatRadioModule,
+    MatCheckboxModule,
     SliderModule,
     ChartModule,
     RangeNavigatorModule,
@@ -75,9 +85,14 @@ import { DatumvrijemerasponComponent } from './komponente/datumvrijemeraspon/dat
     FormsModule,
     AgChartsAngularModule,
     AgGridModule.withComponents([]),
-    NoopAnimationsModule
+    NoopAnimationsModule,
   ],
-  providers: [AreaSeriesService, DateTimeService, StepLineSeriesService, RangeTooltipService],
-  bootstrap: [AppComponent]
+  providers: [
+    AreaSeriesService,
+    DateTimeService,
+    StepLineSeriesService,
+    RangeTooltipService,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -10,6 +10,57 @@
         <div class="card-title">
           <h3>Hidrološke postaje</h3>
         </div>
+        <div class="card-options block">
+          <div class="container-fluid">
+            <div class="card-select">
+              <select>
+                <option value="Akumulacija Kruščica">
+                  Cetina 1
+                </option>
+                <option value="Akumulacija Peruća">Cetina 2</option>
+                <option value="Akumulacija Dubrovnik">Cetina 3</option>
+              </select>
+            </div>
+            <div class="card-select">
+              <select>
+                <option value="Akumulacija Kruščica">
+                  Postaja 1
+                </option>
+                <option value="Akumulacija Peruća">Postaja 2</option>
+                <option value="Akumulacija Dubrovnik">Postaja 3</option>
+              </select>
+            </div>
+            <div class="card-checkbox">
+              <mat-checkbox>Protok</mat-checkbox>
+              <mat-checkbox>Relativne razine</mat-checkbox>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="card-datetime">
+              <mat-form-field class="card-datepicker" appearance="none">
+                <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="pickerFrom"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #pickerFrom></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="card-datetime">
+              <mat-form-field class="card-datepicker" appearance="none">
+                <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="pickerTo"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #pickerTo></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="card-range-picker">
+              <ejs-rangenavigator (changed)='rangeUpdate($event)' #range id="range" intervalType='Hours' class="card-range" valueType='DateTime' [value]='' [dataSource]='' xName='' yName=''></ejs-rangenavigator>
+            </div>
+          </div>
+        </div>
         <div class="card">
           <div class="card-title">
             <h3>Razina [m.n.m]</h3>

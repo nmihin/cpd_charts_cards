@@ -80,7 +80,7 @@ export class HidroloskePostajeComponent implements OnInit {
   ];
 
   constructor() {
-        // RAZINA 
+        // RAZINA
         this.optionsRazina = {
           data: this.razina,
           series: [
@@ -107,7 +107,7 @@ export class HidroloskePostajeComponent implements OnInit {
             enabled: false
           }
         };
-        // RELATIVNA RAZINA 
+        // RELATIVNA RAZINA
         this.optionsRelativnaRazina = {
           data: this.relativnaRazina,
           series: [
@@ -134,7 +134,7 @@ export class HidroloskePostajeComponent implements OnInit {
             enabled: false
           }
         };
-        // PROTOK 
+        // PROTOK
           this.optionsProtok = {
             data: this.protok,
             series: [
@@ -161,6 +161,14 @@ export class HidroloskePostajeComponent implements OnInit {
               enabled: false
             }
           };
+  }
+
+  selectMonth(e): void {
+
+  }
+
+  rangeUpdate(e): void {
+
   }
 
   ngOnInit(): void {
