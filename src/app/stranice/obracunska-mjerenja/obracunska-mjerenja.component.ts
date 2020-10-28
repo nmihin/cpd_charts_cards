@@ -196,15 +196,7 @@ export class ObracunskaMjerenjaComponent implements OnInit {
   }
 
   rangeUpdate(e): void {
-    const startValue = new Date(Math.round(this.RangeObj.startValue)).toISOString();
-    const endValue = new Date(Math.round(this.RangeObj.endValue)).toISOString();
 
-    // tslint:disable-next-line: typedef
-    const res = this.vrijednosti.filter(function(o) {
-      return o.vrijeme <= endValue && o.vrijeme >= startValue;
-    });
-
-    this.optionsRazinaInit(res);
   }
 
 }

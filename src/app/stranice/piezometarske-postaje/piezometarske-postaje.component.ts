@@ -11,127 +11,127 @@ export class PiezometarskePostajeComponent implements OnInit {
 
   razina = [
     {
-      vrijeme: '00:00',
+      vrijeme: '2017-08-13T00:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '00:30',
+      vrijeme: '2017-08-13T01:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '01:00',
+      vrijeme: '2017-08-13T02:00:00Z',
        'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '01:30',
-       'HE Rijeka Agregat 1' : 0,
-      'HE Rijeka Agregat 2' : 2,
-    },
-      {
-      vrijeme: '02:00',
-      'HE Rijeka Agregat 1' : 0,
-      'HE Rijeka Agregat 2' : 2,
-    },
-    {
-      vrijeme: '02:30',
-      'HE Rijeka Agregat 1' : 0,
-      'HE Rijeka Agregat 2' : 2,
-    },
-    {
-      vrijeme: '03:00',
-       'HE Rijeka Agregat 1' : 0,
-      'HE Rijeka Agregat 2' : 2,
-    },
-    {
-      vrijeme: '03:30',
+      vrijeme: '2017-08-13T03:00:00Z',
        'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
       {
-      vrijeme: '04:00',
+      vrijeme: '2017-08-13T04:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '04:30',
+      vrijeme: '2017-08-13T05:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '05:00',
+      vrijeme: '2017-08-13T06:00:00Z',
        'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '05:30',
+      vrijeme: '2017-08-13T07:00:00Z',
        'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
       {
-      vrijeme: '06:00',
+      vrijeme: '2017-08-13T08:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '06:30',
+      vrijeme: '2017-08-13T08:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '07:00',
+      vrijeme: '2017-08-13T10:00:00Z',
+       'HE Rijeka Agregat 1' : 0,
+      'HE Rijeka Agregat 2' : 2,
+    },
+    {
+      vrijeme: '2017-08-13T11:00:00Z',
+       'HE Rijeka Agregat 1' : 0,
+      'HE Rijeka Agregat 2' : 2,
+    },
+      {
+      vrijeme: '2017-08-13T12:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '07:30',
+      vrijeme: '2017-08-13T13:00:00Z',
+      'HE Rijeka Agregat 1' : 0,
+      'HE Rijeka Agregat 2' : 2,
+    },
+    {
+      vrijeme: '2017-08-13T14:00:00Z',
+      'HE Rijeka Agregat 1' : 0,
+      'HE Rijeka Agregat 2' : 2,
+    },
+    {
+      vrijeme: '2017-08-13T15:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
       {
-      vrijeme: '08:00',
+      vrijeme: '2017-08-13T16:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '08:30',
+      vrijeme: '2017-08-13T17:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 3,
     },
     {
-      vrijeme: '09:00',
+      vrijeme: '2017-08-13T18:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 3,
     },
     {
-      vrijeme: '09:30',
+      vrijeme: '2017-08-13T19:00:00Z',
        'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 3,
     },
       {
-      vrijeme: '10:00',
+      vrijeme: '2017-08-13T20:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2.5,
     },
     {
-      vrijeme: '10:30',
+      vrijeme: '2017-08-13T21:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2.5,
     },
     {
-      vrijeme: '11:00',
+      vrijeme: '2017-08-13T22:00:00Z',
        'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
     {
-      vrijeme: '11:30',
+      vrijeme: '2017-08-13T23:00:00Z',
        'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     },
       {
-      vrijeme: '12:00',
+      vrijeme: '2017-08-13T24:00:00Z',
       'HE Rijeka Agregat 1' : 0,
       'HE Rijeka Agregat 2' : 2,
     }
@@ -161,10 +161,40 @@ export class PiezometarskePostajeComponent implements OnInit {
           }
         }
       ],
+      axes: [
+        {
+          type: 'category',
+          nice: false,
+          position: 'bottom',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.slice(11, 16);
+            },
+            fontSize: 12
+          },
+        },
+        {
+          type: 'number',
+          position: 'left',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.toFixed(1);
+            },
+          },
+        },
+      ],
       legend: {
         position: 'bottom'
       }
     };
+  }
+
+  selectMonth(e): void {
+
+  }
+
+  rangeUpdate(e): void {
+
   }
 
   ngOnInit(): void {

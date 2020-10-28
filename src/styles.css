@@ -377,7 +377,25 @@ Cards
   overflow: hidden;
 }
 
+.card .card-options.block {
+  display: block;
+}
+
+.card .card-options.block .container-fluid {
+  margin: 0 1% 1% 0;
+}
+
 .card .card-options > div {
+  margin: 0 1% 0 0;
+}
+
+.card .card-options .container-fluid {
+  margin: 0 1% 0 0;
+  display: flex;
+}
+
+
+.card .card-options .container-fluid > div {
   margin: 0 1% 0 0;
 }
 
@@ -426,6 +444,7 @@ Cards
   border:1px solid #ccc;
   border-radius: 5px;
   height: 36px;
+  width: 100%;
 }
 
 .card .card-options select:focus {
@@ -502,6 +521,7 @@ Chart range
   flex: 0 0 98%;
   max-width: 98%;
   margin: 1%;
+  padding: 0;
 }
 
 .card .mat-tab-header {
