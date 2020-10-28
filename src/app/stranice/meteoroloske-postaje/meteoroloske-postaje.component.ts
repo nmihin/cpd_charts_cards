@@ -107,26 +107,26 @@ export class MeteoroloskePostajeComponent implements OnInit {
   ];
 
   brzinaVjetraSmjer = [
-    { brzina: 0.0, vrijeme: "2017-08-13T00:00:00Z" },
-    { brzina: 0.2, vrijeme: "2017-08-14T00:00:00Z" },
-    { brzina: 0.4, vrijeme: "2017-08-15T00:00:00Z" },
-    { brzina: 0.6, vrijeme: "2017-08-16T00:00:00Z" },
-    { brzina: 0.8, vrijeme: "2017-08-17T00:00:00Z" },
-    { brzina: 1.0, vrijeme: "2017-08-18T00:00:00Z" },
-    { brzina: 1.2, vrijeme: "2017-08-19T00:00:00Z" },
-    { brzina: 1.4, vrijeme: "2017-08-20T00:00:00Z" },
-    { brzina: 1.4, vrijeme: "2017-08-21T00:00:00Z" },
-    { brzina: 1.0, vrijeme: "2017-08-22T00:00:00Z" },
-    { brzina: 3.0, vrijeme: "2017-08-23T00:00:00Z" },
-    { brzina: 2.8, vrijeme: "2017-08-24T00:00:00Z" },
-    { brzina: 1.0, vrijeme: "2017-08-25T00:00:00Z" },
-    { brzina: 2.0, vrijeme: "2017-08-26T00:00:00Z" },
-    { brzina: 1.0, vrijeme: "2017-08-27T00:00:00Z" },
-    { brzina: 1.0, vrijeme: "2017-08-28T00:00:00Z" },
-    { brzina: 0.6, vrijeme: "2017-08-29T00:00:00Z" },
-    { brzina: 0.4, vrijeme: "2017-08-30T00:00:00Z" },
-    { brzina: 0.2, vrijeme: "2017-08-31T00:00:00Z" },
-    { brzina: 0.1, vrijeme: "2017-09-01T00:00:00Z" }
+    { brzina: 0.0, vrijeme: "2017-08-13T00:00:00Z", smjer: 'SZ' },
+    { brzina: 0.2, vrijeme: "2017-08-14T00:00:00Z", smjer: 'SZ' },
+    { brzina: 0.4, vrijeme: "2017-08-15T00:00:00Z", smjer: 'SZ' },
+    { brzina: 0.6, vrijeme: "2017-08-16T00:00:00Z", smjer: 'SZ' },
+    { brzina: 0.8, vrijeme: "2017-08-17T00:00:00Z", smjer: 'SZ' },
+    { brzina: 1.0, vrijeme: "2017-08-18T00:00:00Z", smjer: 'SZ' },
+    { brzina: 1.2, vrijeme: "2017-08-19T00:00:00Z", smjer: 'SZ' },
+    { brzina: 1.4, vrijeme: "2017-08-20T00:00:00Z", smjer: 'SZ' },
+    { brzina: 1.4, vrijeme: "2017-08-21T00:00:00Z", smjer: 'SZ' },
+    { brzina: 1.0, vrijeme: "2017-08-22T00:00:00Z", smjer: 'SZ' },
+    { brzina: 3.0, vrijeme: "2017-08-23T00:00:00Z", smjer: 'SZ' },
+    { brzina: 2.8, vrijeme: "2017-08-24T00:00:00Z", smjer: 'SZ' },
+    { brzina: 1.0, vrijeme: "2017-08-25T00:00:00Z", smjer: 'SZ' },
+    { brzina: 2.0, vrijeme: "2017-08-26T00:00:00Z", smjer: 'SZ' },
+    { brzina: 1.0, vrijeme: "2017-08-27T00:00:00Z", smjer: 'SZ' },
+    { brzina: 1.0, vrijeme: "2017-08-28T00:00:00Z", smjer: 'SZ' },
+    { brzina: 0.6, vrijeme: "2017-08-29T00:00:00Z", smjer: 'SZ' },
+    { brzina: 0.4, vrijeme: "2017-08-30T00:00:00Z", smjer: 'SZ' },
+    { brzina: 0.2, vrijeme: "2017-08-31T00:00:00Z", smjer: 'SZ' },
+    { brzina: 0.1, vrijeme: "2017-09-01T00:00:00Z", smjer: 'SZ' }
   ];
 
   kolicinaPadalina = [
@@ -161,10 +161,11 @@ export class MeteoroloskePostajeComponent implements OnInit {
           type: 'line',
           xKey: 'vrijeme',
           yKey: 'temperatura',
-          stroke: '#41a9c9',
+          stroke: '#f3622d',
+          tooltipEnabled: false,
           marker: {
-            fill: '#41a9c9',
-            stroke: '#41a9c9'
+            fill: '#f3622d',
+            stroke: '#f3622d'
           },
           label: {
             // tslint:disable-next-line: typedef
@@ -172,8 +173,8 @@ export class MeteoroloskePostajeComponent implements OnInit {
               return params.value === undefined ? '' : params.value.toFixed(0);
             },
           },
-          fills: '#41a9c9',
-          strokes: '#41a9c9',
+          fills: '#f3622d',
+          strokes: '#f3622d',
         }
       ],
       axes: [
@@ -210,6 +211,7 @@ export class MeteoroloskePostajeComponent implements OnInit {
           type: 'column',
           xKey: 'vrijeme',
           yKeys: ['kolicina'],
+          tooltipEnabled: false
         },
       ],
       axes: [
@@ -246,6 +248,7 @@ export class MeteoroloskePostajeComponent implements OnInit {
           type: 'column',
           xKey: 'vrijeme',
           yKeys: ['intenzitet'],
+          tooltipEnabled: false
         },
       ],
       axes: [
@@ -282,10 +285,11 @@ export class MeteoroloskePostajeComponent implements OnInit {
           type: 'line',
           xKey: 'vrijeme',
           yKey: 'postotak',
-          stroke: '#41a9c9',
+          stroke: '#f3622d',
+          tooltipEnabled: false,
           marker: {
-            fill: '#41a9c9',
-            stroke: '#41a9c9'
+            fill: '#f3622d',
+            stroke: '#f3622d'
           },
           label: {
             // tslint:disable-next-line: typedef
@@ -293,8 +297,8 @@ export class MeteoroloskePostajeComponent implements OnInit {
               return params.value === undefined ? '' : params.value.toFixed(0);
             },
           },
-          fills: '#41a9c9',
-          strokes: '#41a9c9',
+          fills: '#f3622d',
+          strokes: '#f3622d',
         }
       ],
       axes: [
@@ -331,10 +335,11 @@ export class MeteoroloskePostajeComponent implements OnInit {
           type: 'line',
           xKey: 'vrijeme',
           yKey: 'tlak',
-          stroke: '#41a9c9',
+          stroke: '#f3622d',
+          tooltipEnabled: false,
           marker: {
-            fill: '#41a9c9',
-            stroke: '#41a9c9'
+            fill: '#f3622d',
+            stroke: '#f3622d'
           },
           label: {
             // tslint:disable-next-line: typedef
@@ -342,8 +347,8 @@ export class MeteoroloskePostajeComponent implements OnInit {
               return params.value === undefined ? '' : params.value.toFixed(0);
             },
           },
-          fills: '#41a9c9',
-          strokes: '#41a9c9',
+          fills: '#f3622d',
+          strokes: '#f3622d',
         }
       ],
       axes: [
@@ -380,10 +385,10 @@ export class MeteoroloskePostajeComponent implements OnInit {
           type: 'line',
           xKey: 'vrijeme',
           yKey: 'brzina',
-          stroke: '#41a9c9',
+          stroke: '#f3622d',
           marker: {
-            fill: '#41a9c9',
-            stroke: '#41a9c9'
+            fill: '#f3622d',
+            stroke: '#f3622d'
           },
           label: {
             // tslint:disable-next-line: typedef
@@ -391,8 +396,14 @@ export class MeteoroloskePostajeComponent implements OnInit {
               return params.value === undefined ? '' : params.value.toFixed(0);
             },
           },
-          fills: '#41a9c9',
-          strokes: '#41a9c9',
+          fills: '#f3622d',
+          strokes: '#f3622d',
+          tooltipRenderer: function (params) {
+            return {
+              title: 'Datum: ' + params.datum.vrijeme.slice(8, 10) + '.' + params.datum.vrijeme.slice(6, 7) + '.',
+              content: 'Smjer vjetra: ' + params.datum.smjer,
+            };
+          }
         }
       ],
       axes: [
