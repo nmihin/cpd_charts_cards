@@ -10,36 +10,67 @@
         <div class="card-title">
           <h3>Proizvodnja - po pogonima [MWh]</h3>
         </div>
+        <div class="card-options block">
+          <div class="container-fluid">
+            <div class="card-select">
+              <select>
+                <option value="Akumulacija Kruščica">
+                  Sliv 1
+                </option>
+                <option value="Akumulacija Peruća">Sliv 2</option>
+                <option value="Akumulacija Dubrovnik">Sliv 3</option>
+              </select>
+            </div>
+            <div class="card-select">
+              <select>
+                <option value="Akumulacija Kruščica">
+                  Postaja 1
+                </option>
+                <option value="Akumulacija Peruća">Postaja 2</option>
+                <option value="Akumulacija Dubrovnik">Postaja 3</option>
+              </select>
+            </div>
+            <div class="card-select">
+              <select>
+                <option value="Akumulacija Kruščica">
+                  Parametar 1
+                </option>
+                <option value="Akumulacija Peruća">Parametar 2</option>
+                <option value="Akumulacija Dubrovnik">Parametar 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="card-datetime">
+              <mat-form-field class="card-datepicker" appearance="none">
+                <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="pickerFrom"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #pickerFrom></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="card-datetime">
+              <mat-form-field class="card-datepicker" appearance="none">
+                <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="pickerTo"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #pickerTo></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="card-range-picker">
+              <ejs-rangenavigator (changed)='rangeUpdate($event)' #range id="range" intervalType='Hours' class="card-range" valueType='DateTime' [value]='value' [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
+            </div>
+          </div>
+        </div>
         <div class="card">
           <div class="card-title">
             <h3>Radna snaga pogona [MWh]</h3>
           </div>
           <div class="card-content">
-            <div class="card-options">
-              <div class="card-datetime">
-                <mat-form-field class="card-datepicker" appearance="none">
-                  <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
-                  <mat-datepicker-toggle
-                    matSuffix
-                    [for]="pickerFrom"
-                  ></mat-datepicker-toggle>
-                  <mat-datepicker #pickerFrom></mat-datepicker>
-                </mat-form-field>
-              </div>
-              <div class="card-datetime">
-                <mat-form-field class="card-datepicker" appearance="none">
-                  <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
-                  <mat-datepicker-toggle
-                    matSuffix
-                    [for]="pickerTo"
-                  ></mat-datepicker-toggle>
-                  <mat-datepicker #pickerTo></mat-datepicker>
-                </mat-form-field>
-              </div>
-              <div class="card-range-picker">
-                <ejs-rangenavigator (changed)='rangeUpdate($event)' #range id="range" intervalType='Hours' class="card-range" valueType='DateTime' [value]='value' [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
-              </div>
-            </div>
             <ag-charts-angular
             [options]="optionsRadnaSnaga"
           ></ag-charts-angular>

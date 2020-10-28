@@ -379,6 +379,7 @@ Cards
 
 .card .card-options.block {
   display: block;
+  margin-bottom: 0;
 }
 
 .card .card-options.block .container-fluid {
