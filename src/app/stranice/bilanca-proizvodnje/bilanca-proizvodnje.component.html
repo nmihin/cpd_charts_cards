@@ -1,45 +1,45 @@
 <div class="main-content">
   <div class="row">
     <div class="col-12">
-      <h2 class="page-title">Proizvodnja</h2>
+      <h2 class="page-title">Bilanca proizvodnja</h2>
     </div>
   </div>
   <div class="row">
     <div class="col-12">
       <div class="card">
         <div class="card-title">
-          <h3>Bilanca [MWh]</h3>
+          <h3>Proizvodnja</h3>
+        </div>
+        <div class="card-options">
+          <div class="card-datetime">
+            <mat-form-field class="card-datepicker" appearance="none">
+              <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="pickerFrom"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #pickerFrom></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="card-datetime">
+            <mat-form-field class="card-datepicker" appearance="none">
+              <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="pickerTo"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #pickerTo></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="card-range-picker">
+            <ejs-rangenavigator (changed)='rangeUpdate($event)' #range id="range" intervalType='Hours' class="card-range" valueType='DateTime' [value]='value' [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
+          </div>
         </div>
         <div class="card">
           <div class="card-title">
-            <h3>Radna snaga pogona [MWh]</h3>
+            <h3>Bilanca [MWh]</h3>
           </div>
           <div class="card-content">
-            <div class="card-options">
-              <div class="card-datetime">
-                <mat-form-field class="card-datepicker" appearance="none">
-                  <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
-                  <mat-datepicker-toggle
-                    matSuffix
-                    [for]="pickerFrom"
-                  ></mat-datepicker-toggle>
-                  <mat-datepicker #pickerFrom></mat-datepicker>
-                </mat-form-field>
-              </div>
-              <div class="card-datetime">
-                <mat-form-field class="card-datepicker" appearance="none">
-                  <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
-                  <mat-datepicker-toggle
-                    matSuffix
-                    [for]="pickerTo"
-                  ></mat-datepicker-toggle>
-                  <mat-datepicker #pickerTo></mat-datepicker>
-                </mat-form-field>
-              </div>
-              <div class="card-range-picker">
-                <ejs-rangenavigator (changed)='rangeUpdate($event)' #range id="range" intervalType='Hours' class="card-range" valueType='DateTime' [value]='value' [dataSource]='chartData' xName='vrijeme' yName='razina'></ejs-rangenavigator>
-              </div>
-            </div>
             <ag-charts-angular
             [options]="optionsBilanca"
           ></ag-charts-angular>
