@@ -15,141 +15,141 @@ export class MeteoroloskePostajeComponent implements OnInit {
   optionsBrzinaVjetraSmjer: any;
 
   temperatura = [
-    { temperatura: 16, vrijeme: "11.06." },
-    { temperatura: 17, vrijeme: "12.06." },
-    { temperatura: 18, vrijeme: "13.06." },
-    { temperatura: 19, vrijeme: "14.06." },
-    { temperatura: 20, vrijeme: "15.06." },
-    { temperatura: 21, vrijeme: "16.06." },
-    { temperatura: 22, vrijeme: "17.06." },
-    { temperatura: 23, vrijeme: "18.06." },
-    { temperatura: 22, vrijeme: "19.06." },
-    { temperatura: 21, vrijeme: "20.06." },
-    { temperatura: 20, vrijeme: "21.06." },
-    { temperatura: 19, vrijeme: "22.06." },
-    { temperatura: 22, vrijeme: "23.06." },
-    { temperatura: 20, vrijeme: "24.06." },
-    { temperatura: 18, vrijeme: "25.06." },
-    { temperatura: 21, vrijeme: "26.06." },
-    { temperatura: 25, vrijeme: "27.06." },
-    { temperatura: 25, vrijeme: "28.06." },
-    { temperatura: 27, vrijeme: "29.06." },
-    { temperatura: 29, vrijeme: "30.06." }
+    { temperatura: 16, vrijeme: "2017-08-13T00:00:00Z" },
+    { temperatura: 17, vrijeme: "2017-08-14T00:00:00Z" },
+    { temperatura: 18, vrijeme: "2017-08-15T00:00:00Z" },
+    { temperatura: 19, vrijeme: "2017-08-16T00:00:00Z" },
+    { temperatura: 20, vrijeme: "2017-08-17T00:00:00Z" },
+    { temperatura: 21, vrijeme: "2017-08-18T00:00:00Z" },
+    { temperatura: 22, vrijeme: "2017-08-19T00:00:00Z" },
+    { temperatura: 23, vrijeme: "2017-08-20T00:00:00Z" },
+    { temperatura: 22, vrijeme: "2017-08-21T00:00:00Z" },
+    { temperatura: 21, vrijeme: "2017-08-22T00:00:00Z" },
+    { temperatura: 20, vrijeme: "2017-08-23T00:00:00Z." },
+    { temperatura: 19, vrijeme: "2017-08-24T00:00:00Z" },
+    { temperatura: 22, vrijeme: "2017-08-25T00:00:00Z" },
+    { temperatura: 20, vrijeme: "2017-08-26T00:00:00Z" },
+    { temperatura: 18, vrijeme: "2017-08-27T00:00:00Z" },
+    { temperatura: 21, vrijeme: "2017-08-28T00:00:00Z" },
+    { temperatura: 25, vrijeme: "2017-08-29T00:00:00Z" },
+    { temperatura: 25, vrijeme: "2017-08-30T00:00:00Z" },
+    { temperatura: 27, vrijeme: "2017-08-31T00:00:00Z" },
+    { temperatura: 29, vrijeme: "2017-09-01T00:00:00Z" }
   ];
 
   intenzitetPadalina = [
-    { intenzitet: 10, vrijeme: "11.06." },
-    { intenzitet: 1, vrijeme: "12.06." },
-    { intenzitet: 0, vrijeme: "13.06." },
-    { intenzitet: 0, vrijeme: "14.06." },
-    { intenzitet: 6, vrijeme: "15.06." },
-    { intenzitet: 2, vrijeme: "16.06." },
-    { intenzitet: 1, vrijeme: "17.06." },
-    { intenzitet: 0, vrijeme: "18.06." },
-    { intenzitet: 0, vrijeme: "19.06." },
-    { intenzitet: 0, vrijeme: "20.06." },
-    { intenzitet: 6, vrijeme: "21.06." },
-    { intenzitet: 7, vrijeme: "22.06." },
-    { intenzitet: 10, vrijeme: "23.06." },
-    { intenzitet: 0, vrijeme: "24.06." },
-    { intenzitet: 0, vrijeme: "25.06." },
-    { intenzitet: 0, vrijeme: "26.06." },
-    { intenzitet: 0, vrijeme: "27.06." },
-    { intenzitet: 0, vrijeme: "28.06." },
-    { intenzitet: 0, vrijeme: "29.06." },
-    { intenzitet: 0, vrijeme: "30.06." }
+    { intenzitet: 10, vrijeme: "2017-08-13T00:00:00Z" },
+    { intenzitet: 1, vrijeme: "2017-08-14T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-15T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-16T00:00:00Z" },
+    { intenzitet: 6, vrijeme: "2017-08-17T00:00:00Z" },
+    { intenzitet: 2, vrijeme: "2017-08-18T00:00:00Z" },
+    { intenzitet: 1, vrijeme: "2017-08-19T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-20T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-21T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-22T00:00:00Z" },
+    { intenzitet: 6, vrijeme: "2017-08-23T00:00:00Z" },
+    { intenzitet: 7, vrijeme: "2017-08-24T00:00:00Z" },
+    { intenzitet: 10, vrijeme: "2017-08-25T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-26T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-27T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-28T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-29T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-30T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-08-31T00:00:00Z" },
+    { intenzitet: 0, vrijeme: "2017-09-01T00:00:00Z" }
   ];
 
   relativnaVlaznost = [
-    { postotak: 40, vrijeme: "11.06." },
-    { postotak: 45, vrijeme: "12.06." },
-    { postotak: 50, vrijeme: "13.06." },
-    { postotak: 55, vrijeme: "14.06." },
-    { postotak: 60, vrijeme: "15.06." },
-    { postotak: 65, vrijeme: "16.06." },
-    { postotak: 50, vrijeme: "17.06." },
-    { postotak: 48, vrijeme: "18.06." },
-    { postotak: 47, vrijeme: "19.06." },
-    { postotak: 45, vrijeme: "20.06." },
-    { postotak: 40, vrijeme: "21.06." },
-    { postotak: 40, vrijeme: "22.06." },
-    { postotak: 45, vrijeme: "23.06." },
-    { postotak: 47, vrijeme: "24.06." },
-    { postotak: 49, vrijeme: "25.06." },
-    { postotak: 53, vrijeme: "26.06." },
-    { postotak: 70, vrijeme: "27.06." },
-    { postotak: 75, vrijeme: "28.06." },
-    { postotak: 70, vrijeme: "29.06." },
-    { postotak: 65, vrijeme: "30.06." }
+    { postotak: 40, vrijeme: "2017-08-13T00:00:00Z" },
+    { postotak: 45, vrijeme: "2017-08-14T00:00:00Z" },
+    { postotak: 50, vrijeme: "2017-08-15T00:00:00Z" },
+    { postotak: 55, vrijeme: "2017-08-16T00:00:00Z" },
+    { postotak: 60, vrijeme: "2017-08-17T00:00:00Z" },
+    { postotak: 65, vrijeme: "2017-08-18T00:00:00Z" },
+    { postotak: 50, vrijeme: "2017-08-19T00:00:00Z" },
+    { postotak: 48, vrijeme: "2017-08-20T00:00:00Z" },
+    { postotak: 47, vrijeme: "2017-08-21T00:00:00Z" },
+    { postotak: 45, vrijeme: "2017-08-22T00:00:00Z" },
+    { postotak: 40, vrijeme: "2017-08-23T00:00:00Z" },
+    { postotak: 40, vrijeme: "2017-08-24T00:00:00Z" },
+    { postotak: 45, vrijeme: "2017-08-25T00:00:00Z" },
+    { postotak: 47, vrijeme: "2017-08-26T00:00:00Z" },
+    { postotak: 49, vrijeme: "2017-08-27T00:00:00Z" },
+    { postotak: 53, vrijeme: "2017-08-28T00:00:00Z" },
+    { postotak: 70, vrijeme: "2017-08-29T00:00:00Z" },
+    { postotak: 75, vrijeme: "2017-08-30T00:00:00Z" },
+    { postotak: 70, vrijeme: "2017-08-31T00:00:00Z" },
+    { postotak: 65, vrijeme: "2017-09-01T00:00:00Z" }
   ];
 
   tlakZraka = [
-    { tlak: 990.2, vrijeme: "11.06." },
-    { tlak: 990.3, vrijeme: "12.06." },
-    { tlak: 990.4, vrijeme: "13.06." },
-    { tlak: 990.5, vrijeme: "14.06." },
-    { tlak: 990.7, vrijeme: "15.06." },
-    { tlak: 991.0, vrijeme: "16.06." },
-    { tlak: 990.7, vrijeme: "17.06." },
-    { tlak: 990.5, vrijeme: "18.06." },
-    { tlak: 990.2, vrijeme: "19.06." },
-    { tlak: 990.6, vrijeme: "20.06." },
-    { tlak: 990.8, vrijeme: "21.06." },
-    { tlak: 991.2, vrijeme: "22.06." },
-    { tlak: 991.5, vrijeme: "23.06." },
-    { tlak: 991.7, vrijeme: "24.06." },
-    { tlak: 991.6, vrijeme: "25.06." },
-    { tlak: 991.5, vrijeme: "26.06." },
-    { tlak: 991.2, vrijeme: "27.06." },
-    { tlak: 990.8, vrijeme: "28.06." },
-    { tlak: 990.6, vrijeme: "29.06." },
-    { tlak: 990.4, vrijeme: "30.06." }
+    { tlak: 990.2, vrijeme: "2017-08-13T00:00:00Z" },
+    { tlak: 990.3, vrijeme: "2017-08-14T00:00:00Z" },
+    { tlak: 990.4, vrijeme: "2017-08-15T00:00:00Z" },
+    { tlak: 990.5, vrijeme: "2017-08-16T00:00:00Z" },
+    { tlak: 990.7, vrijeme: "2017-08-17T00:00:00Z" },
+    { tlak: 991.0, vrijeme: "2017-08-18T00:00:00Z" },
+    { tlak: 990.7, vrijeme: "2017-08-19T00:00:00Z" },
+    { tlak: 990.5, vrijeme: "2017-08-20T00:00:00Z" },
+    { tlak: 990.2, vrijeme: "2017-08-21T00:00:00Z" },
+    { tlak: 990.6, vrijeme: "2017-08-22T00:00:00Z" },
+    { tlak: 990.8, vrijeme: "2017-08-23T00:00:00Z" },
+    { tlak: 991.2, vrijeme: "2017-08-24T00:00:00Z" },
+    { tlak: 991.5, vrijeme: "2017-08-25T00:00:00Z" },
+    { tlak: 991.7, vrijeme: "2017-08-26T00:00:00Z" },
+    { tlak: 991.6, vrijeme: "2017-08-27T00:00:00Z" },
+    { tlak: 991.5, vrijeme: "2017-08-28T00:00:00Z" },
+    { tlak: 991.2, vrijeme: "2017-08-29T00:00:00Z" },
+    { tlak: 990.8, vrijeme: "2017-08-30T00:00:00Z" },
+    { tlak: 990.6, vrijeme: "2017-08-31T00:00:00Z" },
+    { tlak: 990.4, vrijeme: "2017-09-01T00:00:00Z" }
   ];
 
   brzinaVjetraSmjer = [
-    { brzina: 0.0, vrijeme: "11.06." },
-    { brzina: 0.2, vrijeme: "12.06." },
-    { brzina: 0.4, vrijeme: "13.06." },
-    { brzina: 0.6, vrijeme: "14.06." },
-    { brzina: 0.8, vrijeme: "15.06." },
-    { brzina: 1.0, vrijeme: "16.06." },
-    { brzina: 1.2, vrijeme: "17.06." },
-    { brzina: 1.4, vrijeme: "18.06." },
-    { brzina: 1.4, vrijeme: "19.06." },
-    { brzina: 1.0, vrijeme: "20.06." },
-    { brzina: 3.0, vrijeme: "21.06." },
-    { brzina: 2.8, vrijeme: "22.06." },
-    { brzina: 1.0, vrijeme: "23.06." },
-    { brzina: 2.0, vrijeme: "24.06." },
-    { brzina: 1.0, vrijeme: "25.06." },
-    { brzina: 1.0, vrijeme: "26.06." },
-    { brzina: 0.6, vrijeme: "27.06." },
-    { brzina: 0.4, vrijeme: "28.06." },
-    { brzina: 0.2, vrijeme: "29.06." },
-    { brzina: 0.1, vrijeme: "30.06." }
+    { brzina: 0.0, vrijeme: "2017-08-13T00:00:00Z" },
+    { brzina: 0.2, vrijeme: "2017-08-14T00:00:00Z" },
+    { brzina: 0.4, vrijeme: "2017-08-15T00:00:00Z" },
+    { brzina: 0.6, vrijeme: "2017-08-16T00:00:00Z" },
+    { brzina: 0.8, vrijeme: "2017-08-17T00:00:00Z" },
+    { brzina: 1.0, vrijeme: "2017-08-18T00:00:00Z" },
+    { brzina: 1.2, vrijeme: "2017-08-19T00:00:00Z" },
+    { brzina: 1.4, vrijeme: "2017-08-20T00:00:00Z" },
+    { brzina: 1.4, vrijeme: "2017-08-21T00:00:00Z" },
+    { brzina: 1.0, vrijeme: "2017-08-22T00:00:00Z" },
+    { brzina: 3.0, vrijeme: "2017-08-23T00:00:00Z" },
+    { brzina: 2.8, vrijeme: "2017-08-24T00:00:00Z" },
+    { brzina: 1.0, vrijeme: "2017-08-25T00:00:00Z" },
+    { brzina: 2.0, vrijeme: "2017-08-26T00:00:00Z" },
+    { brzina: 1.0, vrijeme: "2017-08-27T00:00:00Z" },
+    { brzina: 1.0, vrijeme: "2017-08-28T00:00:00Z" },
+    { brzina: 0.6, vrijeme: "2017-08-29T00:00:00Z" },
+    { brzina: 0.4, vrijeme: "2017-08-30T00:00:00Z" },
+    { brzina: 0.2, vrijeme: "2017-08-31T00:00:00Z" },
+    { brzina: 0.1, vrijeme: "2017-09-01T00:00:00Z" }
   ];
 
   kolicinaPadalina = [
-    { kolicina: 0.0, vrijeme: "11.06." },
-    { kolicina: 0.2, vrijeme: "12.06." },
-    { kolicina: 0.4, vrijeme: "13.06." },
-    { kolicina: 0.6, vrijeme: "14.06." },
-    { kolicina: 0.8, vrijeme: "15.06." },
-    { kolicina: 1.0, vrijeme: "16.06." },
-    { kolicina: 1.2, vrijeme: "17.06." },
-    { kolicina: 1.4, vrijeme: "18.06." },
-    { kolicina: 1.4, vrijeme: "19.06." },
-    { kolicina: 1.0, vrijeme: "20.06." },
-    { kolicina: 3.0, vrijeme: "21.06." },
-    { kolicina: 2.8, vrijeme: "22.06." },
-    { kolicina: 1.0, vrijeme: "23.06." },
-    { kolicina: 2.0, vrijeme: "24.06." },
-    { kolicina: 1.0, vrijeme: "25.06." },
-    { kolicina: 1.0, vrijeme: "26.06." },
-    { kolicina: 0.6, vrijeme: "27.06." },
-    { kolicina: 0.4, vrijeme: "28.06." },
-    { kolicina: 0.2, vrijeme: "29.06." },
-    { kolicina: 0.1, vrijeme: "30.06." }
+    { kolicina: 0.0, vrijeme: "2017-08-13T00:00:00Z" },
+    { kolicina: 0.2, vrijeme: "2017-08-14T00:00:00Z" },
+    { kolicina: 0.4, vrijeme: "2017-08-15T00:00:00Z" },
+    { kolicina: 0.6, vrijeme: "2017-08-16T00:00:00Z" },
+    { kolicina: 0.8, vrijeme: "2017-08-17T00:00:00Z" },
+    { kolicina: 1.0, vrijeme: "2017-08-18T00:00:00Z" },
+    { kolicina: 1.2, vrijeme: "2017-08-19T00:00:00Z" },
+    { kolicina: 1.4, vrijeme: "2017-08-20T00:00:00Z" },
+    { kolicina: 1.4, vrijeme: "2017-08-21T00:00:00Z" },
+    { kolicina: 1.0, vrijeme: "2017-08-22T00:00:00Z" },
+    { kolicina: 3.0, vrijeme: "2017-08-23T00:00:00Z" },
+    { kolicina: 2.8, vrijeme: "2017-08-24T00:00:00Z" },
+    { kolicina: 1.0, vrijeme: "2017-08-25T00:00:00Z" },
+    { kolicina: 2.0, vrijeme: "2017-08-26T00:00:00Z" },
+    { kolicina: 1.0, vrijeme: "2017-08-27T00:00:00Z" },
+    { kolicina: 1.0, vrijeme: "2017-08-28T00:00:00Z" },
+    { kolicina: 0.6, vrijeme: "2017-08-29T00:00:00Z" },
+    { kolicina: 0.4, vrijeme: "2017-08-30T00:00:00Z" },
+    { kolicina: 0.2, vrijeme: "2017-08-31T00:00:00Z" },
+    { kolicina: 0.1, vrijeme: "2017-09-01T00:00:00Z" }
   ];
 
   constructor() {
@@ -176,6 +176,28 @@ export class MeteoroloskePostajeComponent implements OnInit {
           strokes: '#41a9c9',
         }
       ],
+      axes: [
+        {
+          type: 'category',
+          nice: false,
+          position: 'bottom',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.slice(8, 10) + '.' + params.value.slice(6, 7) + '.' ;
+            },
+            fontSize: 10
+          },
+        },
+        {
+          type: 'number',
+          position: 'left',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.toFixed(0);
+            },
+          },
+        },
+      ],
       legend: {
         enabled: false
       }
@@ -187,16 +209,30 @@ export class MeteoroloskePostajeComponent implements OnInit {
         {
           type: 'column',
           xKey: 'vrijeme',
-          yKey: 'kolicina',
+          yKeys: ['kolicina'],
+        },
+      ],
+      axes: [
+        {
+          type: 'category',
+          nice: false,
+          position: 'bottom',
           label: {
-            // tslint:disable-next-line: typedef
-            formatter (params) {
-              return params.value === undefined ? '' : params.value.toFixed(0);
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.slice(8, 10) + '.' + params.value.slice(6, 7) + '.' ;
+            },
+            fontSize: 10
+          },
+        },
+        {
+          type: 'number',
+          position: 'left',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.toFixed(1);
             },
           },
-          fills: ['#41a9c9', '#f3622d'],
-          strokes: ['#41a9c9', '#f3622d']
-        }
+        },
       ],
       legend: {
         enabled: false
@@ -209,16 +245,30 @@ export class MeteoroloskePostajeComponent implements OnInit {
         {
           type: 'column',
           xKey: 'vrijeme',
-          yKey: 'intenzitet',
+          yKeys: ['intenzitet'],
+        },
+      ],
+      axes: [
+        {
+          type: 'category',
+          nice: false,
+          position: 'bottom',
           label: {
-            // tslint:disable-next-line: typedef
-            formatter (params) {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.slice(8, 10) + '.' + params.value.slice(6, 7) + '.' ;
+            },
+            fontSize: 10
+          },
+        },
+        {
+          type: 'number',
+          position: 'left',
+          label: {
+            formatter: function (params) {
               return params.value === undefined ? '' : params.value.toFixed(0);
             },
           },
-          fills: ['#41a9c9', '#f3622d'],
-          strokes: ['#41a9c9', '#f3622d']
-        }
+        },
       ],
       legend: {
         enabled: false
@@ -247,6 +297,28 @@ export class MeteoroloskePostajeComponent implements OnInit {
           strokes: '#41a9c9',
         }
       ],
+      axes: [
+        {
+          type: 'category',
+          nice: false,
+          position: 'bottom',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.slice(8, 10) + '.' + params.value.slice(6, 7) + '.' ;
+            },
+            fontSize: 10
+          },
+        },
+        {
+          type: 'number',
+          position: 'left',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.toFixed(0);
+            },
+          },
+        },
+      ],
       legend: {
         enabled: false
       }
@@ -274,6 +346,28 @@ export class MeteoroloskePostajeComponent implements OnInit {
           strokes: '#41a9c9',
         }
       ],
+      axes: [
+        {
+          type: 'category',
+          nice: false,
+          position: 'bottom',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.slice(8, 10) + '.' + params.value.slice(6, 7) + '.' ;
+            },
+            fontSize: 10
+          },
+        },
+        {
+          type: 'number',
+          position: 'left',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.toFixed(1);
+            },
+          },
+        },
+      ],
       legend: {
         enabled: false
       }
@@ -300,6 +394,28 @@ export class MeteoroloskePostajeComponent implements OnInit {
           fills: '#41a9c9',
           strokes: '#41a9c9',
         }
+      ],
+      axes: [
+        {
+          type: 'category',
+          nice: false,
+          position: 'bottom',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.slice(8, 10) + '.' + params.value.slice(6, 7) + '.' ;
+            },
+            fontSize: 10
+          },
+        },
+        {
+          type: 'number',
+          position: 'left',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.toFixed(1);
+            },
+          },
+        },
       ],
       legend: {
         enabled: false
