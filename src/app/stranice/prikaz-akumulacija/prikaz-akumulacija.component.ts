@@ -178,10 +178,32 @@ export class PrikazAkumulacijaComponent implements OnInit {
             // tslint:disable-next-line: typedef
             formatter(params) {
               return params.value === undefined ? '' : params.value.toFixed(0);
-            },
+            }
           },
           fills: ['#41a9c9', '#f3622d'],
           strokes: ['#41a9c9', '#f3622d'],
+        },
+      ],
+      axes: [
+        {
+          type: 'category',
+          nice: false,
+          position: 'bottom',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value;
+            },
+            fontSize: 12
+          },
+        },
+        {
+          type: 'number',
+          position: 'left',
+          label: {
+            formatter: function (params) {
+              return params.value === undefined ? '' : params.value.toFixed(0);
+            },
+          },
         },
       ],
       legend: {

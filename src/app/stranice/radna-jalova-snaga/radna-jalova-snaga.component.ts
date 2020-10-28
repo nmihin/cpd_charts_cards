@@ -10,6 +10,7 @@ export class RadnaJalovaSnagaComponent implements OnInit {
   optionsRadna: any;
 
   radna = [
+    { lokacija: 'Raspoloživo', vrijednost: 180 },
     { lokacija: 'RHE Velebit', vrijednost: 89.39 },
     { lokacija: 'HE Jaruga', vrijednost: 0.02 },
     { lokacija: 'HE Zakučac', vrijednost: 4.5 },
@@ -28,8 +29,9 @@ export class RadnaJalovaSnagaComponent implements OnInit {
         {
           type: 'pie',
           angleKey: 'vrijednost',
-          labelKey: 'lokacija'
-        }
+          labelKey: 'lokacija',
+          fills: ['#fff', '#f3622d', '#fba71b', '#57b757', '#41a9c9', '#4258c9', '#9a42c8', '#c84164', '#888888','#ed5854','#000000'],
+        },
       ],
       legend: {
         position: 'right'
