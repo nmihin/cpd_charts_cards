@@ -434,6 +434,14 @@ export class MeteoroloskePostajeComponent implements OnInit {
     };
   }
 
+  selectMonth(e): void {
+
+  }
+
+  rangeUpdate(e): void {
+
+  }
+
   ngOnInit(): void {
   }
 

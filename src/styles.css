@@ -474,8 +474,8 @@ Cards
   border-color: #41a9c9;
 }
 
-.card .card-options .card-checkbox {
-  padding: 10px;
+.card .card-options.block .card-checkbox {
+  padding: 5px 5px 5px 90px;
   position: relative;
 }
 
