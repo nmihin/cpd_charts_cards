@@ -1073,6 +1073,37 @@ Responsive
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .card .card-options {
+    display: block;
+  }
+  .card .card-options .card-select {
+    width: 32%;
+    display: block;
+    float: left;
+    flex:auto;
+  }
+  .card .card-options .card-datetime {
+    width: 32%;
+    display: block;
+    float: left;
+    flex:auto;
+  }
+  .card .card-options .card-range-picker {
+    width: 100%;
+    display: block;
+    float: left;
+    flex:auto;
+  }
+  .card .card-options .card-datepicker {
+    flex: auto !important;
+    max-width: fit-content;
+  }
+  .card .card-options .card-radio .mat-radio-button {
+    margin-bottom: 5px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .card .card.col-lg-6 {
     padding: 0;
