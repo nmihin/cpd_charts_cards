@@ -13,6 +13,7 @@
         <div class="card-options block">
           <div class="container-fluid">
             <div class="card-select">
+              <label class="card-label">Pogon</label>
               <select>
                 <option value="Akumulacija Kruščica">
                   Pogon 1
@@ -22,12 +23,14 @@
               </select>
             </div>
             <div class="card-radio">
+              <label class="card-label">Snaga prikaza</label>
               <mat-radio-group aria-label="Select an option">
                 <mat-radio-button value="1">Radna snaga</mat-radio-button>
                 <mat-radio-button value="2">Jalova snaga</mat-radio-button>
               </mat-radio-group>
             </div>
             <div class="card-radio">
+              <label class="card-label">Način prikaza</label>
               <mat-radio-group aria-label="Select an option">
                 <mat-radio-button value="1">Pogon</mat-radio-button>
                 <mat-radio-button value="2">Agregat</mat-radio-button>
@@ -36,6 +39,7 @@
           </div>
           <div class="container-fluid">
             <div class="card-datetime">
+              <label class="card-label">Od</label>
               <mat-form-field class="card-datepicker" appearance="none">
                 <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
                 <mat-datepicker-toggle
@@ -46,6 +50,7 @@
               </mat-form-field>
             </div>
             <div class="card-datetime">
+              <label class="card-label">Do</label>
               <mat-form-field class="card-datepicker" appearance="none">
                 <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
                 <mat-datepicker-toggle

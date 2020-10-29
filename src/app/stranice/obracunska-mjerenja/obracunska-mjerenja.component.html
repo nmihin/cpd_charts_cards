@@ -13,6 +13,7 @@
         <div class="card-content">
           <div class="card-options">
             <div class="card-select">
+              <label class="card-label">Pogon</label>
               <select>
                 <option value="Akumulacija Kruščica">
                   Pogon 1
@@ -22,6 +23,7 @@
               </select>
             </div>
             <div class="card-datetime">
+              <label class="card-label">Od</label>
               <mat-form-field class="card-datepicker" appearance="none">
                 <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerFrom" />
                 <mat-datepicker-toggle
@@ -32,6 +34,7 @@
               </mat-form-field>
             </div>
             <div class="card-datetime">
+              <label class="card-label">Do</label>
               <mat-form-field class="card-datepicker" appearance="none">
                 <input matInput (dateChange)="selectMonth($event)" [matDatepicker]="pickerTo" />
                 <mat-datepicker-toggle

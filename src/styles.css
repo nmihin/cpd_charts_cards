@@ -390,6 +390,19 @@ Cards
   margin: 0 1% 0 0;
 }
 
+.card .card-options .card-label {
+  position: absolute;
+  right: auto;
+  left: 0;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  top: 0;
+}
+
 .card .card-options .container-fluid {
   margin: 0 1% 0 0;
   display: flex;
@@ -400,13 +413,25 @@ Cards
   margin: 0 1% 0 0;
 }
 
+.card .card-options .card-datetime {
+  position: relative;
+}
+
 .card .card-options .card-select {
-  flex: 0 0 160px;
+  flex: 0 0 260px;
+  padding-left: 60px;
+  position: relative;
+}
+
+.card .card-options .card-select .card-label {
+  max-width: 45px;
 }
 
 .card .card-options .card-datepicker {
-  flex: 0 0 160px;
-  max-width: 160px;
+  flex: 0 0 225px;
+  max-width: 225px;
+  position: relative;
+  margin-left: 25px;
 }
 
 .card .card-options .card-radio {
@@ -415,6 +440,16 @@ Cards
   border-radius: 5px;
   font-family: Roboto, "Helvetica Neue", sans-serif !important;
   font-size: 12px;
+  margin-left: 65px !important;
+  position: relative;
+}
+
+.card .card-options .card-radio .card-label {
+  position: absolute;
+  right: auto;
+  left: -55px;
+  width: 55px;
+  line-height: 1.2;
 }
 
 .card .card-options .card-radio .mat-radio-button {
@@ -441,6 +476,7 @@ Cards
 
 .card .card-options .card-checkbox {
   padding: 10px;
+  position: relative;
 }
 
 .card .card-options .card-checkbox .mat-checkbox {
@@ -1082,6 +1118,7 @@ Responsive
     display: block;
     float: left;
     flex:auto;
+    padding-left: 0;
   }
   .card .card-options .card-datetime {
     width: 32%;
@@ -1098,9 +1135,16 @@ Responsive
   .card .card-options .card-datepicker {
     flex: auto !important;
     max-width: fit-content;
+    margin-left: 0 !important;
+  }
+  .card .card-options .card-radio {
+    margin-left: 0 !important;
   }
   .card .card-options .card-radio .mat-radio-button {
     margin-bottom: 5px;
+  }
+  .card .card-options .card-label {
+    display: none;
   }
 }
 
